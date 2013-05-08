@@ -1,0 +1,127 @@
+		<div id="slider1" class="royalSlider rsDefault wrapper">
+		<div>
+			<div>
+				<a href=allie.html><img class="thumb_img" src="images/thumbs/allie_thumb.jpg"></a>
+				<!-- <p class="thumb_name">Allie's name</p> -->
+			</div>
+
+			<div>
+				<a href=theo.html><img class="thumb_img" src="images/thumbs/theo_thumb.jpg"></a>
+				<!-- <p class="thumb_name">Theo's name</p> -->
+			</div>
+
+			<div>
+				<a href=elisabeth.html><img class="thumb_img" src="images/thumbs/elisabeth_thumb.jpg"></a>
+				<!-- <p class="thumb_name">Elisabeth's name</p> -->
+			</div>
+
+			<div>
+				<a href=jeff.html><img class="thumb_img" src="images/thumbs/jeff_thumb.jpg"></a>
+				<!-- <p class="thumb_name">Jeff's name</p>-->
+			</div>
+
+			<div>
+				<ul>
+					<a href=allie.html><li class="thumb_list">Allie Gassman</li></a>
+					<a href=theo.html><li class="thumb_list">Theo Tushaus</li></a>
+					<a href=elisabeth.html><li class="thumb_list">Elisabeth Sobczak</li></a>
+					<a href=jeff.html><li class="thumb_list">Jeff Stack</li></a>
+				</ul>	
+			</div>
+
+			<div class="line-under"><hr class="line wrapper"></hr></div>
+				
+		</div>
+			
+		<div>
+			<div>
+				<a href=ken.html><img class="thumb_img" src="images/thumbs/ken_thumb.jpg"></a>
+				<!-- <p class="thumb_name">Ken's name</p>-->
+			</div>
+
+			<div>
+				<a href=lysaundra.html><img class="thumb_img" src="images/thumbs/lysaundra_thumb.jpg"></a>
+				<!-- <p class="thumb_name">Lysaundra's name</p>-->
+			</div>
+
+			<div>
+				<a href=mary.html><img class="thumb_img" src="images/thumbs/mary_thumb.jpg"></a>
+				<!-- <p class="thumb_name">Mary's name</p>-->
+			</div>
+
+			<!-- hack to get around needing a fourth photo to kick down the names -->
+			
+			<div>
+				<img class="thumb_img" src="images/thumbs/spacer.png">
+				<!-- <p class="thumb_name">Mary's name</p>-->
+			</div>
+
+			<div>
+				<ul>
+					<a href=ken.html><li class="thumb_list">Ken McRae</li></a>
+					<a href=lysaundra.html><li class="thumb_list">LySaundra Campbell</li></a>
+					<a href=mary.html><li class="thumb_list">Mary Hartigan</li></a>
+				</ul>	
+			</div>
+
+			<div class="line-under"><hr class="line wrapper"></hr></div>
+
+		</div>
+	</div>
+
+		<!-- ************************************************************************************************** -->
+		<!-- ************************************************************************************************** -->
+		<!-- ************************************************************************************************** -->
+		<!-- ************************************************************************************************** -->
+
+		<div id="slider3" class="royalSlider rsDefault">
+		<div>
+			<div>
+				<a href=allie.html><img class="thumb_img" src="images/thumbs/allie_thumb.jpg"></a>
+				<!-- <p class="thumb_name">Allie's name</p> -->
+			</div>
+
+			<div>
+				<a href=theo.html><img class="thumb_img" src="images/thumbs/theo_thumb.jpg"></a>
+				<!-- <p class="thumb_name">Theo's name</p> -->
+			</div>
+
+			<div>
+				<a href=elisabeth.html><img class="thumb_img" src="images/thumbs/elisabeth_thumb.jpg"></a>
+				<!-- <p class="thumb_name">Elisabeth's name</p> -->
+			</div>
+
+			<div>
+				<a href=jeff.html><img class="thumb_img" src="images/thumbs/jeff_thumb.jpg"></a>
+				<!-- <p class="thumb_name">Jeff's name</p>-->
+			</div>
+
+			<div>
+				<a href=ken.html><img class="thumb_img" src="images/thumbs/ken_thumb.jpg"></a>
+				<!-- <p class="thumb_name">Ken's name</p>-->
+			</div>
+
+			<div>
+				<a href=lysaundra.html><img class="thumb_img" src="images/thumbs/lysaundra_thumb.jpg"></a>
+				<!-- <p class="thumb_name">Lysaundra's name</p>-->
+			</div>
+
+			<div>
+				<a href=mary.html><img class="thumb_img" src="images/thumbs/mary_thumb.jpg"></a>
+				<!-- <p class="thumb_name">Mary's name</p>-->
+			</div>
+
+			<div>
+				<ul>
+					<a href=allie.html><li class="thumb_list">Allie Gassman</li></a>
+					<a href=theo.html><li class="thumb_list">Theo Tushaus</li></a>
+					<a href=elisabeth.html><li class="thumb_list">Elisabeth Sobczak</li></a>
+					<a href=jeff.html><li class="thumb_list">Jeff Stack</li></a>
+					<a href=ken.html><li class="thumb_list">Ken McRae</li></a>
+					<a href=lysaundra.html><li class="thumb_list">LySaundra Campbell</li></a>
+					<a href=mary.html><li class="thumb_list">Mary Hartigan</li></a>
+				</ul>	
+			</div>
+				
+		</div>
+	</div>

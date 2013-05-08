@@ -1,0 +1,281 @@
+<!doctype html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+
+<!--
+	The comment jumble above is handy for targeting old IE with CSS.
+	http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+-->
+	
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<title>Elisabeth Sobczak -- Matters of Faith</title>
+		
+		<!-- Please don't add "maximum-scale=1" here. It's bad for accessibility. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<link rel="stylesheet" href="main.css"/>
+		<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="royalslider/royalslider.css">
+		<link rel="stylesheet" href="royalslider/skins/default/rs-default.css"> 
+
+		<!-- Plugin requires jQuery 1.7+  -->
+		<!-- If you already have jQuery on your page, you shouldn't include it second time. -->
+		<script src='royalslider/jquery-1.8.3.min.js'></script>
+
+		<!-- Main slider JS script file --> 
+		<!-- Create it with slider online build tool for better performance. -->
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+
+		  // 2. This code loads the IFrame Player API code asynchronously.
+		  var tag = document.createElement('script');
+		  tag.src = "http://www.youtube.com/iframe_api";
+		  var firstScriptTag = document.getElementsByTagName('script')[0];
+		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		  // 3. This function creates an <iframe> (and YouTube player)
+		  //    after the API code downloads.
+		  var player;
+		  function onYouTubeIframeAPIReady() {
+		    player = new YT.Player('player', {
+		      events: {
+		        'onReady': onPlayerReady,
+		        //'onStateChange': onPlayerStateChange
+		      }
+		    });
+		  }
+
+		  // 4. The API will call this function when the video player is ready.
+			function onPlayerReady(event){
+			    $("#play_button").on('click', function() {
+			      player.playVideo();
+			      $('#imageID').css('display', 'none');
+			      $('.story_caption').css('margin-top', '.3em'); 
+			      $('#video_holder').css('display', 'block');			      
+			      $('iframe').css('display', 'block');
+			      $('#play_button').css('display', 'none');
+			      $('#pause_button').css('display', 'block');
+			    });
+
+			    $("#pause_button").on('click', function() {
+			      player.stopVideo(); 
+			      $('iframe').css('display', 'none');
+			      $('#video_holder').css('display', 'none');
+			      $('#imageID').css('display', 'block'); 
+			      $('#pause_button').css('display', 'none');
+			      $('#play_button').css('display', 'block');
+			    });
+			  }
+
+		</script>
+
+	</head>
+	
+	<body lang="en">
+		
+		<div class="story_logo">		
+			<div class="wrapper">
+				<div class="logo">
+					<a class="logo" href="index.html"><h1 class="story_logo">Matters of Faith</h1></a>
+					<h2 id="story_logo_deck">The enlightenment from spirituality; the transformation of people</h2>
+				</div>
+			<hr id="line-top" class="line wrapper"></hr>
+			</div>
+		</div>	
+
+		<div id="video_holder">
+		<iframe id="player" type="text/html" src="http://www.youtube.com/embed/uF80oeRkC8o?enablejsapi=1&rel=0&controls=0&autoplay=0&showinfo=0&modestbranding=1" origin="http://www.bengal.missouri.edu/~wjg2q2/faith/lysaundra.html" frameborder="0"> </iframe>
+		</div>
+
+	<div>	
+		<div>
+		<img src="images/Elisabeth_FINAL_web.jpg" class="story_img" id="imageID" />
+
+		<div class="wrapper story_caption"><p>Elisabeth Sobczak and her partner Betsy Reeves first met while working on Hurricane Katrina relief in Mississippi. They now live together in Ashland, Mo.</p></div>
+		</div>
+
+		<div class="video_tease">
+			<a id="play_button">&nbsp;</a>
+			<a id="pause_button">&nbsp;</a>
+			<h4 class="tease_headline">Elisabeth Sobczak</h4>
+			<p class="tease_summary">Brought together by Hurricane Katrina relief efforts, Elisabeth Sobczak and Betsy Reeves find acceptance. The couple married on the 4-year anniversary of the storm and is active in the Missouri United Methodist Church.</p>
+		</div>
+
+	</div>
+
+		<div class="story_body">
+		<h3 class="story_headline">A perfect storm</h3>
+		<h4 class="story_deck">Elisabeth Sobczak struggles and triumphs with self-acceptance and sexuality</h4>
+		<h6 class="story_byline">By Natalie Maggiore</h6>
+
+		<aside class="sidebar">
+			<img src="images/Elisabeth_2_FINAL_web.jpg" class="sidebar_image" alt="caption goes here" />
+			<p class="secondary_caption">Sobczak and Reeves got married and exchanged rings in Mystic, Ct. in 2009. The women are both active members of the United Methodist Church.</p>
+			<div class="sidebar_pull_quote">
+			<p>“It wasn’t my faith in God that was rocky; it was my faith in the church.”</p><p class="attribution">— Betsy Reeves</p>
+			</div>
+		</aside>	
+
+		<article class="story_text">
+			
+			<p>Elisabeth Sobczak had dated men her whole life.</p>
+
+			<p>She had even been seeing someone when she first traveled to Mississippi in August 2005 to volunteer with the Red Cross after Hurricane Katrina. On one of her trips, things changed.</p>
+
+			<p>One night when she had fallen asleep in her truck after a long day in the Red Cross kitchen, a woman knocked on her window to see if she was OK. Her name was Betsy Reeves. She was in charge of the health of all evacuees and workers for the chapter.</p>
+
+			<p>Sobczak was soon overseeing cooking for the Red Cross workers. Upon finding out that Reeves had food allergies, she made her special meals. As they worked together over the next few months, they formed a friendship. “We talked on the phone for hours,” Sobczak says. “We kind of both knew something was going on.”</p>
+
+			<p>At 38, Sobczak realized that she had found her soul mate.</p>
+
+			<div class="subhead">A sign from above</div>
+
+			<p>Sobczak struggled with the thought of being part of the LGBTQ community because the Catholic faith in which she was raised neither accepts nor supports gay marriage. She also says that she struggled to feel physically attractive to another woman.</p>
+
+			<p>After a plane ride from another Hurricane Katrina relief trip in Mississippi, her internal battle reached a turning point. As she passed through the aisle looking for a place to sit, she noticed a middle seat open next to a woman. When she inquired about its vacancy, the woman simply replied, “This seat was meant for you.” Sobczak would find after the trip that this couldn’t have been truer.</p>
+
+			<p>The woman introduced herself as Mrs. Taylor and kept up a conversation throughout the entire ride. She and Sobczak discussed self-acceptance and equality for all races and orientations. Although this stranger did not know it, she was changing someone’s life with her words.</p>
+
+			<p>After that day on the plane, Sobczak became more comfortable with her sexuality. “I think God was using her as a vehicle to say: ‘It’s OK. You are who you are. I love you regardless,’” Sobczak says.</p>
+
+			<div class="subhead">Embracing their love</div>
+
+			<p>Sobczak decided to relocate to Mississippi permanently in 2006 to fully devote her time to the relief effort. She kept in contact with Reeves. Together, they figured out their feelings. They were married in Mystic, Conn., on August 29, 2009 — the anniversary of Hurricane Katrina.</p>
+
+			<p>However, Sobczak still felt uncomfortable embracing her true identity in public. “People are tolerant,” she says. “I don’t like that word. It’s like they’re just putting up with you.”</p>
+
+			<p>She felt she had to keep her personal life with Reeves to herself. She noticed this especially at her Shelter Insurance job, where her co-workers could easily discuss their husbands and wives. “I can’t begin to describe the energy that gets sucked out of you when you have to live two different lives,” she says.</p>
+
+			<p>After a death in the family in 2011, the couple realized that putting up the façade was no longer worth it. “After what happened, life and death, sometimes you don’t know one minute from the next if something’s going to happen,” Reeves says. “Hiding wasn’t important anymore. Loving people and letting them know that was important.”</p>
+
+			<p>Although they continued to take these steps, they still needed to deal with their orientation in accordance with their faith. Reeves was also raised Catholic.</p>
+
+			<p>“It wasn’t my faith in God that was rocky; it was my faith in the church,” she says. “I never understood why LGBTQ people felt the way they did until I joined the community.”</p>
+
+			<div class="subhead">A church with open doors</div>
+
+			<p>Sobczak and Reeves began their search for an accepting church. They relocated to Columbia for work. After visiting a few churches that didn’t feel right, they decided to visit the Missouri United Methodist Church on Ninth Street. They saw pamphlets about the church’s acceptance policy and went to a service. “Right as we walked in, the pastor, Jim Bryan, was saying that this church was open and reconciling to all: black, white, gay, straight,” Sobczak says. “We were blown away.”</p>
+
+			<p>Sobczak and Reeves decided to get involved with the church and learn more. They began going to Open Door Ministry, a group for LGBTQ community members and allies, which they now lead every third Thursday of the month.</p>
+
+			<div class="pull_quote">
+			<p>“It wasn’t my faith in God that was rocky; it was my faith in the church.”</p><p class="attribution">— Betsy Reeves</p>
+			</div>
+
+			<p>Pastor Trista Soendker Nicholson believes that the church’s policy of inclusivity is just in its nature. “We are all fearfully and wonderfully made as God’s children, and I think an open-door policy helps to reaffirm that to a group of people who have felt excluded from that message,” Nicholson says.</p>
+
+			<p>Although the church is supportive, the religion as a whole is not, according to its Book of Discipline doctrine. At the last United Methodist national conference, delegates voted against same-sex marriage.</p>
+
+			<p>However, Ross Murray, director of News and Faith Initiatives at GLAAD, formerly the Gay & Lesbian Alliance Against Defamation, says American support is really strong in most denominations. According to Public Religion Resource Institute, 51 percent of the general public supports marriage equality. “The Roman Catholic hierarchy tends to be out of step with everyday Catholics on matters of LGBTQ equality,” Murray says, citing an example.</p>
+
+			<p>Sobczak and Reeves were still hesitant at first, but the openness of the others helped them to gain confidence. “We didn’t hold hands in church until a few months ago,” Sobczak says. “A couple across from us was talking about being openly gay, and we were like, ‘Is this real?’ Well, hell. If they can say it, I can say it, too.”</p>
+
+			<p>Sobczak is thankful for that special day on the plane that led to her own acceptance. “I’m constantly feeling euphoric. No more energy gets sucked out of me,” she says. “I guess Hurricane Katrina was a bigger storm than I knew. But it was a beautiful storm.”</p>
+
+		</article>
+
+
+	</div>
+
+	<hr class="line2"></hr>	
+
+	<div id = "story_slider" class="royalSlider rsDefault wrapper">
+		<!-- Teaser heads must be 20 characters or less -->
+			<div>
+
+				<img class="story_thumb" src="images/thumbs/ken_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Ken McRae</p>
+				<h5 class="story_name">A yogic path</h5>
+				<p class="story_summary">Businessman-turned-yoga-teacher takes a complex spiritual journey</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/allie_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Allie Gassmann</p>
+				<h5 class="story_name">Acting on beliefs</h5>
+				<p class="story_summary">Gassmann tries to live with the entire planet in mind</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/jeff_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Jeff Stack</p>
+				<h5 class="story_name">Plea for peace</h5>
+				<p class="story_summary">Jeff Stack advocates for nonviolence</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/lysaundra_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">LySaundra Campbell</p>
+				<h5 class="story_name">Defining grace</h5>
+				<p class="story_summary">LySaundra Campbell found the strength to move on from family tragedy</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/mary_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Mary Hartigan</p>
+				<h5 class="story_name">Reinvention of life</h5>
+				<p class="story_summary">Mary Hartigan finds a family and a community in Judaism</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/theo_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Theo Tushaus</p>
+				<h5 class="story_name">Leap from faith</h5>
+				<p class="story_summary">Theo Tushaus finds comfort in his sexuality after discovering an atheist group</p>
+				</div>
+			</div>
+
+	</div>	
+
+		<hr class="line wrapper"></hr>
+
+		<footer>
+			<ul class="footer">
+				
+				<li class="footer">Published by <span class="italics"><a href="http://www.voxmagazine.com/" id="vox">VOX Magazine</a></span></li>
+								
+				<li class="right">About</li>
+
+				<li class="right">The photos</li>
+			</ul>
+
+		</footer>
+
+			<ul class="share">
+
+				<li class="fb-send" data-href="http://www.voxmagazine.com/" data-font="arial"></li>
+
+				<li><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a></li>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</ul>
+
+	</body>
+	
+<script>
+    jQuery(document).ready(function($) {
+        $("#story_slider").royalSlider({
+            arrowsNav: true,
+            controlNavigation: 'none',
+            arrowsNavAutoHide: false,
+            video: {
+            }
+        }); 
+    });
+
+</script>
+
+</html>

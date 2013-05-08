@@ -1,0 +1,266 @@
+<!doctype html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+
+<!--
+	The comment jumble above is handy for targeting old IE with CSS.
+	http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+-->
+	
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<title>Allie Gassmann -- Matters of Faith</title>
+		
+		<!-- Please don't add "maximum-scale=1" here. It's bad for accessibility. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<link rel="stylesheet" href="main.css"/>
+		<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="royalslider/royalslider.css">
+		<link rel="stylesheet" href="royalslider/skins/default/rs-default.css"> 
+
+		<!-- Plugin requires jQuery 1.7+  -->
+		<!-- If you already have jQuery on your page, you shouldn't include it second time. -->
+		<script src='royalslider/jquery-1.8.3.min.js'></script>
+
+		<!-- Main slider JS script file --> 
+		<!-- Create it with slider online build tool for better performance. -->
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+
+		  // 2. This code loads the IFrame Player API code asynchronously.
+		  var tag = document.createElement('script');
+		  tag.src = "http://www.youtube.com/iframe_api";
+		  var firstScriptTag = document.getElementsByTagName('script')[0];
+		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		  // 3. This function creates an <iframe> (and YouTube player)
+		  //    after the API code downloads.
+		  var player;
+		  function onYouTubeIframeAPIReady() {
+		    player = new YT.Player('player', {
+		      events: {
+		        'onReady': onPlayerReady,
+		        //'onStateChange': onPlayerStateChange
+		      }
+		    });
+		  }
+
+		  // 4. The API will call this function when the video player is ready.
+			function onPlayerReady(event){
+			    $("#play_button").on('click', function() {
+			      player.playVideo();
+			      $('#imageID').css('display', 'none');
+			      $('.story_caption').css('margin-top', '.3em'); 
+			      $('#video_holder').css('display', 'block');			      
+			      $('iframe').css('display', 'block');
+			      $('#play_button').css('display', 'none');
+			      $('#pause_button').css('display', 'block');
+			    });
+
+			    $("#pause_button").on('click', function() {
+			      player.stopVideo(); 
+			      $('iframe').css('display', 'none');
+			      $('#video_holder').css('display', 'none');
+			      $('#imageID').css('display', 'block'); 
+			      $('#pause_button').css('display', 'none');
+			      $('#play_button').css('display', 'block');
+			    });
+			  }
+
+		</script>
+
+	</head>
+	
+	<body lang="en">
+		
+		<div class="story_logo">		
+			<div class="wrapper">
+				<div class="logo">
+					<a class="logo" href="index.html"><h1 class="story_logo">Matters of Faith</h1></a>
+					<h2 id="story_logo_deck">The enlightenment from spirituality; the transformation of people</h2>
+				</div>
+			<hr id="line-top" class="line wrapper"></hr>
+			</div>
+		</div>	
+
+		<div id="video_holder">
+		<iframe id="player" type="text/html" src="http://www.youtube.com/embed/xhhKvrMNQ3I?enablejsapi=1&rel=0&controls=0&autoplay=0&showinfo=0&modestbranding=1" origin="http://www.voxmagazine.com" frameborder="0"> </iframe>
+		</div>
+
+	<div>	
+		<div>
+		<img src="images/Allie_FINAL_web.jpg" class="story_img" id="imageID" />
+
+		<div class="wrapper story_caption"><p>Allie Gassmann found the Unitarian Universalist faith after a friend suggested she attend a service. She moved to Columbia in 2000 and has been a member ever since.</p></div>
+		</div>
+
+		<div class="video_tease">
+			<a id="play_button">&nbsp;</a>
+			<a id="pause_button">&nbsp;</a>
+			<h4 class="tease_headline">Allie Gassmann</h4>
+			<p class="tease_summary">Gassmann, a Unitarian Universalist in Columbia, has found a way to weave together her spirituality and her beliefs in a sustainable lifestyle. The church advocates for awareness and activism, both themes of which Gassmann strives to live by. </p>
+		</div>
+
+	</div>
+
+		<div class="story_body">
+		<h3 class="story_headline">Acting on beliefs</h3>
+		<h4 class="story_deck">Allie Gassmann finds meaning in putting her spiritual beliefs into action.</h4>
+		<h6 class="story_byline">By Claire Cole</h6>
+
+		<aside class="sidebar">
+			<img src="images/Allie_2_FINAL_web.jpg" class="sidebar_image" alt="caption goes here" />
+			<p class="secondary_caption">In order to live sustainably, Allie Gassmann, a Unitarian Universalist, uses her bike to get around town and buys local and organic food.</p>
+			<div class="sidebar_pull_quote">
+			<p>“The UU churches have really offered me lots of ways to get involved and do something beyond my own selfish needs.”</p>
+			</div>
+		</aside>	
+
+		<article class="story_text">
+		<p>Allie Gassmann arrives at the Unitarian Universalist Church promptly at 9 a.m. on a bright, warm Sunday. She’s nearly two hours early to the service.</p>
+
+		<p>She works swiftly but quietly as she sets up a small table for the monthly fair-trade coffee, tea and chocolate sale. The products are purchased directly from producers at a fair price. She unpacks box after box as her daughter, Leila, plays the church piano in the next room. For a while, they’re the only two there.</p>
+
+		<p>This level of dedication and service is typical of Gassmann though she doesn’t like to boast. For her, spirituality is less about belief and more about taking action.</p>
+
+		<p>One of her good friends, Kristine Smith, recognizes the rarity of knowing someone so dedicated yet humble about practicing her beliefs. “She’s the kind of person who does what she believes in,” Smith says. It’s not just talk to her.”</p>
+
+		<p>Gassmann strives to live sustainably. She rides her bike often and buys organic. She and her husband, Walter, even installed solar panels on their roof. “Without an environment that can sustain all of us, we will not be able to live the way we’re used to living,” Gassmann says.</p>
+
+		<div class="pull_quote">
+		<p>“The UU churches have really offered me lots of ways to get involved and do something beyond my own selfish needs.”</p>
+		</div>
+
+		<p>This awareness and activism has become important to Gassmann. It took her years, however, to find that this faith has had such a strong influence on her life.</p>
+
+		<p>Gassmann spent her childhood traveling. She was born in Germany and lived in Thailand, Korea and Greece before coming to the U.S. for college. While abroad, she was exposed to numerous faiths. She grew up going to Christian missionary schools and later went to a college founded by a Quaker though it is no longer affiliated with the religion.</p>
+
+		<p>Over time, Gassmann began looking for something different. A Quaker friend suggested she attend a service at a Unitarian Universalist church nearby. She moved to Columbia in 2000 and has been a member ever since. She loves the opportunities the church provides for her to make a difference.</p>
+
+		<p>“The UU churches have really offered me lots of ways to get involved and do something beyond my own selfish needs,” Gassmann says. “In that way, it has definitely changed my life.”</p>
+
+		<div class="subhead">Her new home</div>
+
+		<p>Despite being a small denomination with about 211,000 members nationwide, Unitarian Universalists, known as UUs, are proponents of progressive reform and social activism. Throughout its history, the church has championed causes such as freedom for slaves, civil rights and better working conditions for women.</p> 
+
+		<p>The church doesn’t require its members to believe in a certain set of values or ideas. The Rev. Molly Housh Gordon, the minister at the UU church in Columbia, says the denomination opted to create a covenant, or agreement. “Our lack of creed doesn’t mean we don’t believe things, Gordon says. “It does mean there’s not a test of belief to be among us.”</p>
+
+		<p>All UU churches share seven principles. Gordon calls the principles their “guiding statement.” Members aren’t required to subscribe to all the principles but are expected to commit to the spiritual journey. Gassmann identifies with the seventh principle that concerns the “respect for the interdependent web of all existence.”</p>
+
+		<div class="subhead">Reaching out</div>
+
+		<p>Gassmann participates in many church activities locally, but she is most engaged in a project far from Columbia. Gassmann and the UU church have gone on two trips to Las Mangas, a village in Honduras, to build latrines and volunteer. As Gassmann got to know these people, she discovered the village had another need.</p> 
+
+		<p>The community is situated near a river. For three months every year, the river becomes too high to cross, which makes it impossible for kids to attend classes. To solve this problem, the people of Las Mangas want to install a canasta, a Spanish word meaning basket. A canasta is like a hand-powered zip-line that would allow four people to cross the river at a time.</p>
+
+		<p>Gassmann knew she wanted to help. She got a committee together, and the church began raising funds. They have since reached the necessary $6,000 and sent it to Honduras, and the canasta was installed.</p>
+
+		<p>“Doing something that can help those people who are less fortunate than we are is something that’s just very dear and close to my heart,” Gassmann says.</p>
+
+		</article>
+
+
+	</div>
+
+	<hr class="line2"></hr>	
+
+	<div id = "story_slider" class="royalSlider rsDefault wrapper">
+		<!-- Teaser heads must be 20 characters or less -->
+			<div>
+
+				<img class="story_thumb" src="images/thumbs/ken_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Ken McRae</p>
+				<h5 class="story_name">A yogic path</h5>
+				<p class="story_summary">Businessman-turned-yoga-teacher takes a complex spiritual journey</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/jeff_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Jeff Stack</p>
+				<h5 class="story_name">Plea for peace</h5>
+				<p class="story_summary">Jeff Stack advocates for nonviolence</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/lysaundra_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">LySaundra Campbell</p>
+				<h5 class="story_name">Defining grace</h5>
+				<p class="story_summary">LySaundra Campbell found the strength to move on from family tragedy</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/mary_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Mary Hartigan</p>
+				<h5 class="story_name">Reinvention of life</h5>
+				<p class="story_summary">Mary Hartigan finds a family and a community in Judaism</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/theo_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Theo Tushaus</p>
+				<h5 class="story_name">Leap from faith</h5>
+				<p class="story_summary">Theo Tushaus finds comfort in his sexuality after discovering an atheist group</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/elisabeth_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Elisabeth Sobczak</p>
+				<h5 class="story_name">A perfect storm</h5>
+				<p class="story_summary">Elisabeth Sobczak struggles and triumphs with self-acceptance and sexuality</p>
+				</div>
+			</div>
+
+	</div>	
+
+		<hr class="line wrapper"></hr>
+
+		<footer>
+			<ul class="footer">
+				
+				<li class="footer">Published by <span class="italics"><a href="http://www.voxmagazine.com/" id="vox">VOX Magazine</a></span></li>
+								
+				<li class="right">About</li>
+
+				<li class="right">The photos</li>
+			</ul>
+
+		</footer>
+
+			<ul class="share">
+
+				<li class="fb-send" data-href="http://www.voxmagazine.com/" data-font="arial"></li>
+
+				<li><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a></li>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</ul>
+
+	</body>
+	
+<script>
+    jQuery(document).ready(function($) {
+        $("#story_slider").royalSlider({
+            arrowsNav: true,
+            controlNavigation: 'none',
+            arrowsNavAutoHide: false,
+            video: {
+            }
+        }); 
+    });
+
+</script>
+
+</html>

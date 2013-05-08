@@ -1,0 +1,303 @@
+<!doctype html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+
+<!--
+	The comment jumble above is handy for targeting old IE with CSS.
+	http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+-->
+	
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<title>Jeff Stack -- Matters of Faith</title>
+		
+		<!-- Please don't add "maximum-scale=1" here. It's bad for accessibility. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<link rel="stylesheet" href="main.css"/>
+		<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="royalslider/royalslider.css">
+		<link rel="stylesheet" href="royalslider/skins/default/rs-default.css"> 
+
+		<!-- Plugin requires jQuery 1.7+  -->
+		<!-- If you already have jQuery on your page, you shouldn't include it second time. -->
+		<script src='royalslider/jquery-1.8.3.min.js'></script>
+
+		<!-- Main slider JS script file --> 
+		<!-- Create it with slider online build tool for better performance. -->
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+
+		  // 2. This code loads the IFrame Player API code asynchronously.
+		  var tag = document.createElement('script');
+		  tag.src = "http://www.youtube.com/iframe_api";
+		  var firstScriptTag = document.getElementsByTagName('script')[0];
+		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		  // 3. This function creates an <iframe> (and YouTube player)
+		  //    after the API code downloads.
+		  var player;
+		  function onYouTubeIframeAPIReady() {
+		    player = new YT.Player('player', {
+		      events: {
+		        'onReady': onPlayerReady,
+		        //'onStateChange': onPlayerStateChange
+		      }
+		    });
+		  }
+
+		  // 4. The API will call this function when the video player is ready.
+			function onPlayerReady(event){
+			    $("#play_button").on('click', function() {
+			      player.playVideo();
+			      $('#imageID').css('display', 'none');
+			      $('.story_caption').css('margin-top', '.3em'); 
+			      $('#video_holder').css('display', 'block');			      
+			      $('iframe').css('display', 'block');
+			      $('#play_button').css('display', 'none');
+			      $('#pause_button').css('display', 'block');
+			    });
+
+			    $("#pause_button").on('click', function() {
+			      player.stopVideo(); 
+			      $('iframe').css('display', 'none');
+			      $('#video_holder').css('display', 'none');
+			      $('#imageID').css('display', 'block'); 
+			      $('#pause_button').css('display', 'none');
+			      $('#play_button').css('display', 'block');
+			    });
+			  }
+
+		</script>
+
+	</head>
+	
+	<body lang="en">
+		
+		<div class="story_logo">		
+			<div class="wrapper">
+				<div class="logo">
+					<a class="logo" href="index.html"><h1 class="story_logo">Matters of Faith</h1></a>
+					<h2 id="story_logo_deck">The enlightenment from spirituality; the transformation of people</h2>
+				</div>
+			<hr id="line-top" class="line wrapper"></hr>
+			</div>
+		</div>	
+
+		<div id="video_holder">
+		<iframe id="player" type="text/html" src="http://www.youtube.com/embed/9nbAn9aMmOE?enablejsapi=1&rel=0&controls=0&autoplay=0&showinfo=0&modestbranding=1" origin="http://www.bengal.missouri.edu/~wjg2q2/faith/lysaundra.html" frameborder="0"> </iframe>
+		</div>
+
+	<div>	
+		<div>
+		<img src="images/Jeff_FINAL_web.jpg" class="story_img" id="imageID" />
+
+		<div class="wrapper story_caption"><p>Jeff Stack sits at a full desk in his house. He promotes nonviolence and justice and works for Mid-Missouri Fellowship of Reconcilation (Mid-MO FOR).</p></div>
+		</div>
+
+		<div class="video_tease">
+			<a id="play_button">&nbsp;</a>
+			<a id="pause_button">&nbsp;</a>
+			<h4 class="tease_headline">Jeff Stack</h4>
+			<p class="tease_summary">Jeff Stack walks a quieter road to support nonviolence and freedom.</p>
+		</div>
+
+	</div>
+
+		<div class="story_body">
+		<h3 class="story_headline">Plea for peace</h3>
+		<h4 class="story_deck">Jeff Stack’s advocacy stems from his belief in nonviolence</h4>
+		<h6 class="story_byline">By Hudson Kyle</h6>
+
+		<aside class="sidebar">
+			<img src="images/Jeff_2_FINAL_web.jpg" class="sidebar_image" alt="caption goes here" />
+			<p class="secondary_caption">Stack takes a stroll about once every week in the woods at the back of his house and sees it as a form of mediation.</p>
+			<div class="sidebar_pull_quote">
+			<p>“We should condemn the killing of humans wherever the violence is committed,”</p>
+			</div>
+		</aside>	
+
+		<article class="story_text">
+			
+			<p>The pacifist’s walk is a lonely one.</p>
+			
+			<p>He stands at the front of room 215 in Tate Hall. Ten people occupy the lecture hall built for 65. His drooping eyes scan the group as he sips water from a mason jar mostly stripped of its label.</p>
+
+			<p>He looks back at his notes and resumes his lecture. One of his topics is the ongoing U.S. drone war, and his primary audience is Young Americans for Liberty, an organization that promotes freedom on college campuses.</p>
+
+			<p>At the end of the talk, the group breaks into discussion. After about 15 minutes, the speaker steps away from the podium.</p>
+
+			<p>“Let me grab a chair,” he says. “I feel silly standing up here alone.”</p>
+
+			<div class="subhead">A passion for peace</div>
+
+			<p>Jeff Stack is the mid-Missouri coordinator for the Fellowship of Reconciliation, a national nonprofit that advocates nonviolence. It favors less oppressive foreign policies and opposes the death penalty. Stack is in the minority of Americans on most of the issues he endorses.</p>
+
+			<p>A 2010 Pew Research Center survey found that just 30 percent of Americans are against the death penalty. Less than one-third of Americans disapprove of the U.S. drone attacks, and the number is dropping, according to a February 2013 Pew study.</p>
+
+			<p>Also from Pew, 72 percent of Americans were relieved to learn that the U.S. had killed Osama bin Laden, and 60 percent called themselves proud of their government’s actions.</p>
+
+			<p>Stack is not one of them.</p>
+
+			<p>“We should condemn the killing of humans wherever the violence is committed,” he says.</p>
+
+			<div class="subhead">Faith-driven initiative</div>
+
+			<p>Stack, a 53-year-old Chicago native, is the oldest of six children. He was raised Catholic and attended weekly service and catechism. Eventually, his beliefs diverged from those of his parents.</p>
+
+			<p>“I found too much hypocrisy in general in the Catholic church,” he says. “The treatment of women was particularly troubling to me. Why shouldn’t women be allowed to be priests? Why can’t priests get married if they wish? There were a lot of teachings that seemed too Draconian to me.”</p>
+
+			<p>In the winter of 1982, Stack discovered the Catholic Worker Movement, which exercises Jesus’ instructions to feed the hungry and care for the homeless. Founded by Dorothy Day and Peter Maurin in 1933, the movement also instructs its followers to be peace activists for Christ.</p>
+
+			<p>St. Francis House in Columbia is one of more than 200 Catholic Worker communities around the world. The chapter members live and meet at the house in north Columbia.</p>
+
+			<p>Stack considers himself a Catholic Worker member but not a Catholic. He lived at St. Francis House for five years starting in 1988.</p>
+
+			<div class="pull_quote">
+			<p>“We should condemn the killing of humans wherever the violence is committed,”</p>
+			</div>
+
+			<p>Steve Jacobs, who helped found St. Francis House, says Stack’s old room was basically a big closet where the residents stored supplies and donations.</p>
+
+			<p>The house’s nightly visitors were also unpredictable. Every evening, St. Francis House opens its doors to the homeless.</p>
+
+			<p>“It was a little like a saloon in the Wild West,” Jacobs says. “You never knew who was going to come through those swinging doors.”</p>
+
+			<p>Although Stack moved out two decades ago, Jacobs says Stack still has a peripheral presence.</p>
+
+			<p>“He’s always around in some sense,” Jacobs says. “Sometimes he’ll volunteer to come in and make breakfast for the guys. He really has a heart for the homeless.”</p>
+
+			<div class="subhead">A turning point</div>
+
+			<p>Stack moved to Columbia in 1977 to attend the Missouri School of Journalism because he values equality, justice and human rights — things he still advocates for today.</p>
+
+			<p>On Nov. 14, 1979, a group of students held an anti-Iranian rally near Memorial Union, and Stack, an undergraduate reporter at The Maneater, covered it. He stayed after most protesters and journalists left. Stack was watching the remaining students debate when a woman rushed up to the north lawn of Ellis Library with a gun and held it to her face.</p>
+
+			<p>Some reporters returned to the scene.</p>
+
+			<p>Stack recalls some of them saying, “If she kills herself, this’ll be a front-page story.” The police arrived, and a counselor talked the distressed women into giving up her weapon.</p>
+
+			<p>“It made me begin to wonder about (journalism) altogether,” Stack says. “I realized I had much greater admiration for (the counselor) than I did for the people of the profession I was thinking I wanted to be a part of.”</p>
+
+			<div class="subhead">A practiced patience</div>
+
+			<p>On a Friday at Rock Bridge High School, Stack sits with his back straight, and his mouth in its signature half smile. His table, covered in pamphlets and brochures, stands across from the school’s main office. Students sit along the sides of the hall — eating, chatting, laughing.</p>
+
+			<p>Once a month, Stack sits through the school’s lunch hour and offers a counter-perspective to what military recruiters say. Some of the handouts offer information on the military draft. Others explain what it means to be a conscientious objector.</p> 
+
+			<p>Occasionally, students will slow their walk to glance at the literature. Stack greets them warmly when they come near.</p>
+
+			<p>“Hi, how are you today?”</p>
+
+			<p>Students speed up and occasionally offer a, “Fine, thanks,” over their shoulder.</p>
+
+			<p>As they turn the corner and converge with their peers, Stack says: “You’re welcome to some information. If not, have a great day.”</p>
+
+			<p>Still, his back remains straight, and his smile holds steady.</p>
+
+		</article>
+
+
+	</div>
+
+	<hr class="line2"></hr>	
+
+	<div id = "story_slider" class="royalSlider rsDefault wrapper">
+		<!-- Teaser heads must be 20 characters or less -->
+			<div>
+
+				<img class="story_thumb" src="images/thumbs/ken_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Ken McRae</p>
+				<h5 class="story_name">A yogic path</h5>
+				<p class="story_summary">Businessman-turned-yoga-teacher takes a complex spiritual journey</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/allie_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Allie Gassmann</p>
+				<h5 class="story_name">Acting on beliefs</h5>
+				<p class="story_summary">Gassmann tries to live with the entire planet in mind</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/lysaundra_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">LySaundra Campbell</p>
+				<h5 class="story_name">Defining grace</h5>
+				<p class="story_summary">LySaundra Campbell found the strength to move on from family tragedy</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/mary_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Mary Hartigan</p>
+				<h5 class="story_name">Reinvention of life</h5>
+				<p class="story_summary">Mary Hartigan finds a family and a community in Judaism</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/theo_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Theo Tushaus</p>
+				<h5 class="story_name">Leap from faith</h5>
+				<p class="story_summary">Theo Tushaus finds comfort in his sexuality after discovering an atheist group</p>
+				</div>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/elisabeth_thumb.jpg"/>
+				<div class="story_nav_text">
+				<p class="story_tag">Elisabeth Sobczak</p>
+				<h5 class="story_name">A perfect storm</h5>
+				<p class="story_summary">Elisabeth Sobczak struggles and triumphs with self-acceptance and sexuality</p>
+				</div>
+			</div>
+
+	</div>	
+
+		<hr class="line wrapper"></hr>
+
+		<footer>
+			<ul class="footer">
+				
+				<li class="footer">Published by <span class="italics"><a href="http://www.voxmagazine.com/" id="vox">VOX Magazine</a></span></li>
+								
+				<li class="right">About</li>
+
+				<li class="right">The photos</li>
+			</ul>
+
+		</footer>
+
+			<ul class="share">
+
+				<li class="fb-send" data-href="http://www.voxmagazine.com/" data-font="arial"></li>
+
+				<li><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a></li>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</ul>
+
+	</body>
+	
+<script>
+    jQuery(document).ready(function($) {
+        $("#story_slider").royalSlider({
+            arrowsNav: true,
+            controlNavigation: 'none',
+            arrowsNavAutoHide: false,
+            video: {
+            }
+        }); 
+    });
+
+</script>
+
+</html>
