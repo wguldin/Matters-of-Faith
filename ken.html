@@ -19,7 +19,7 @@
 		<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="royalslider/royalslider.css">
 		<link rel="stylesheet" href="royalslider/skins/default/rs-default.css"> 
-
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 		<!-- Plugin requires jQuery 1.7+  -->
 		<!-- If you already have jQuery on your page, you shouldn't include it second time. -->
 		<script src='royalslider/jquery-1.8.3.min.js'></script>
@@ -27,143 +27,181 @@
 		<!-- Main slider JS script file --> 
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="royalslider/jquery.royalslider.min.js"></script>
-		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-		<script type="text/javascript">
-
-		  // 2. This code loads the IFrame Player API code asynchronously.
-		  var tag = document.createElement('script');
-		  tag.src = "http://www.youtube.com/iframe_api";
-		  var firstScriptTag = document.getElementsByTagName('script')[0];
-		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-		  // 3. This function creates an <iframe> (and YouTube player)
-		  //    after the API code downloads.
-		  var player;
-		  function onYouTubeIframeAPIReady() {
-		    player = new YT.Player('player', {
-		      events: {
-		        'onReady': onPlayerReady,
-		        //'onStateChange': onPlayerStateChange
-		      }
-		    });
-		  }
-
-		  // 4. The API will call this function when the video player is ready.
-			function onPlayerReady(event){
-			    $("#play_button").on('click', function() {
-			      player.playVideo();
-			      $('#imageID').css('display', 'none');
-			      $('.story_caption').css('margin-top', '.3em'); 
-			      $('#video_holder').css('display', 'block');			      
-			      $('iframe').css('display', 'block');
-			      $('#play_button').css('display', 'none');
-			      $('#pause_button').css('display', 'block');
-			    });
-
-			    $("#pause_button").on('click', function() {
-			      player.stopVideo(); 
-			      $('iframe').css('display', 'none');
-			      $('#video_holder').css('display', 'none');
-			      $('#imageID').css('display', 'block'); 
-			      $('#pause_button').css('display', 'none');
-			      $('#play_button').css('display', 'block');
-			    });
-			  }
-
-		</script>
 
 	</head>
 	
 	<body lang="en">
+
+		<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
 		
 		<div class="story_logo">		
 			<div class="wrapper">
 				<div class="logo">
 					<a class="logo" href="index.html"><h1 class="story_logo">Matters of Faith</h1></a>
-					<h2 id="story_logo_deck">The enlightenment from spirituality; the transformation of people</h2>
+					<h2 id="story_logo_deck">Spiritual journeys lead to enlightenment and transformation</h2>
 				</div>
 			<hr id="line-top" class="line wrapper"></hr>
 			</div>
 		</div>	
 
-		<div id="video_holder">
-		<iframe id="player" type="text/html" src="http://www.youtube.com/embed/pD755Zu8Njc?enablejsapi=1&rel=0&controls=0&autoplay=0&showinfo=0&modestbranding=1" origin="http://www.bengal.missouri.edu/~wjg2q2/faith/lysaundra.html" frameborder="0"> </iframe>
-		</div>
-
 	<div>	
 		<div>
-		<img src="images/Ken_FINAL_web.jpg" class="story_img" id="imageID" />
+		<img src="images/Ken_FINAL_web.jpg" class="story_img" id="imageID" alt="Portrait of Ken McRae" />
 
-		<div class="wrapper story_caption"><p>Ken McRae, a yoga teacher at alleyCat Yoga, demonstrates a meditation technique.</p></div>
+		<div class="wrapper story_caption"><p>Ken McRae, a Kripalu yoga teacher at alleyCat Yoga, demonstrates a meditation technique. He studied as a monk for five years at the Kripalu Center for Yoga and Health in Lenox, Mass.</p></div>
 		</div>
 
 		<div class="video_tease">
-			<a id="play_button">&nbsp;</a>
-			<a id="pause_button">&nbsp;</a>
+			<a href="#video_container" id="play_button">&nbsp;</a>
 			<h4 class="tease_headline">Ken McRae</h4>
-			<p class="tease_summary">As a businessman in Canada, Ken McRae was successful. However, after a simple book cover about Buddhism caught his eye, the course of his life changed. He found himself taking his first yoga class, studying as a monk at a yoga center in Massachusetts then traveling the world on a spiritual journey before finally settling in Columbia to open alleyCat yoga studio.</p>
+			<p class="tease_summary">Formerly a successful businessman, Ken McRae changed his life with yoga. He studied as a monk and traveled the world before opening alleyCat yoga studio.</p>
 		</div>
 
 	</div>
 
 		<div class="story_body">
 		<h3 class="story_headline">Living La Vida Yoga</h3>
-		<h4 class="story_deck">Businessman-turned-yoga-teacher describes his complex spiritual journey</h4>
+		<h4 class="story_deck">Ken McRae found spirituality through yoga</h4>
 		<h6 class="story_byline">By Claire Landsbaum</h6>
 
 		<aside class="sidebar">
-			<img src="images/Ken_2_FINAL_web.jpg" class="sidebar_image" alt="caption goes here" />
-			<p class="secondary_caption">McRae occasionally uses a bead made of rosewood seeds to keep track of time while meditating. Counting all the seeds in the bead takes about 12 minutes.</p>
+			<img src="images/Ken_2_FINAL_web.jpg" class="sidebar_image" alt="Portrait of Ken McRae"/>
+			<p class="secondary_caption">McRae occasionally uses a string of rosewood seeds to keep track of time while meditating. Counting the seeds takes about 12 minutes.</p>
 			<div class="sidebar_pull_quote">
 			<p>“This feeling deep inside that I get is so much more than any material or accomplishment could ever provide for me,”</p>
 			</div>
+
+		<div id= "ken_sidebar_sidebar">
+
+			<p class="ken_tag">The health effects/benefits of yoga</p>
+			<h3 class="ken_headline">Stress Less</h3>
+			<h4 class="ken_deck">Yoga and meditation cause changes in the brain</h4>
+
+		<article class="sidebar_text">		
+
+			<p>The practice of yoga includes many elements: poses, meditation, breathing and lifestyle choices. Studies show these practices have powerful effects on the way the mind and body work. Yoga is becoming increasingly popular in the health care field to treat stress and physical conditions, such as lower back pain, and can even affect brain structure.</p>
+
+			<p>Sara Lazar, instructor in the Department of Psychiatry at Harvard Medical School, has done numerous studies that chronicle the biology behind meditation. She became interested in the subject after attending yoga classes, which had an impact on her — in a good way.</p>
+
+			<p>Lazar used a brain scanner to produce images of subjects’ brain activity while they meditated.</p>
+
+			<p>Her results show the science behind yoga’s popularity.</p>
+
+			<p>“The amygdala (a part of the brain that is key to processing emotions) becomes less reactive after a length of time meditating, and it also becomes smaller,” she says. “The change in the amygdala correlated with changes in stress. There’s a real biological reason why they’re feeling less stress.”</p>
+
+			<p>She also found that the hippocampus, a brain structure integral for learning and memory, was larger in those who meditated, which suggests an increase in attention span. A subject’s capacity for empathy and compassion also increased after meditation.</p>
+
+			<p>Erika Patterson, a psychologist who fills in teaching classes at alleyCat and takes classes there herself, has seen these changes occur. She incorporates techniques of Asana and Mahayana yoga and meditation in her work with patients.</p>
+
+			<p>“I’ve witnessed as a professional in people’s healing process that it can be highly effective,” she says.
+			Close your eyes. Concentrate on your breath, noticing as it enters and leaves your body. Empty your mind. Concentrate on the present moment.</p>
+
+			<p>You’ve just changed the shape of your brain.</p>
+
+			<div class="infobox">
+			<p><span class="infobox_head">Ken McRae’s alleyCat Yoga Classes</span></p>
+			<p><span class="infobox_bold">When:</span> Thursday, 5:30–6:45 p.m.; Friday, 4:30–5:45 p.m.; Saturday, 10:30–11:45 a.m.</p>
+			<p><span class="infobox_bold">Where:</span> 23 South Fourth St.</p>
+			<p><span class="infobox_bold">Cost:</span> $13–16</p>
+			<p><span class="infobox_bold">Call:</span> 864-4132</p>
+			<p><span class="infobox_bold">Online:</span> alleycatyoga.com</p>
+			</div>
+
+
+		</article>
+		
+		</div>	
+
 		</aside>	
 
 		<article class="story_text">
 			
 
 			<p>Ken McRae’s voice spreads until it fills the room. It’s level, soothing.</p>
-
 			<p>Yogic.</p>
-
 			<p>“Notice how the body is taking the breath in, how the body is releasing the breath back into the room,” he says. “That is, of course, the first anchor, drawing the attention present into this moment.”</p>
-
 			<p>Seated on a plush plum-colored cushion on his living room floor, McRae faces a wooden altar adorned with tea candles and incense and topped with the Hindu god Ganesha. His legs are crossed, and his eyes are closed. The lids are smooth and untroubled.</p>
-
-			<p>The moment engulfs him. 
-
-			<p>In another moment, years earlier, McRae was a teenager browsing a bookshop in Canada when a red cover caught his eye – Why Buddhism Works. He picked up the book and flipped through it, sparking a lifelong interest in Eastern religions. Years later, as a successful businessman in Toronto, the memory of the book would stir in McRae’s mind. Although he was materially successful — a wealthy computer consultant with a half-million-dollar house and opera tickets — he knew something was missing.</p>
+			<p>The moment engulfs him.</p>
+			<p>In another moment, years earlier, McRae was a teenager browsing a bookshop in Canada when a red cover caught his eye: <span class="italics">Why Buddhism Works.</span> He picked up the book and flipped through it, sparking a lifelong interest in Eastern religions. Years later, as a successful businessman in Toronto, the memory of the book would stir in McRae’s mind. Although he was materially successful — a wealthy computer consultant with a half-million-dollar house and opera tickets — he knew something was missing.</p>
 
 			<div class="subhead">A practicing yogi</div>
 
 			<p>McRae discovered yoga and was drawn to the feelings of contentment and wholeness that accompanied the practice. He took his first class shortly before Christmas of 1988 with a free pass that he’d kept in his sock drawer for three years. “My way of experiencing my life started to change, almost as if my eyes were opened,” he says. “Almost like Dorothy going from a black-and-white world to a colored world.”</p>
-
-			<p>He enrolled in a 750-hour yoga teacher training program in Toronto and eventually quit his job, sold his house, opera tickets and dog and moved with his wife at the time, Kathleen Knipp, to the Kripalu Center for Yoga and Health in Lenox, Mass. He trained as a monk for five years before embarking on a spiritual tour through India, Bali and Italy.</p>
+			<p>He enrolled in a 750-hour yoga teacher training program in Toronto and eventually quit his job, sold his house, opera tickets and dog and moved with his wife at the time, Kathleen Knipp, to the <a href="http://www.kripalu.org" target="_blank" class="body_link">Kripalu Center for Yoga and Health</a> in Lenox, Mass. He trained as a monk for five years before embarking on a spiritual tour through India, Bali and Italy.</p>
 			
 			<div class="pull_quote">
 			<p>“This feeling deep inside that I get is so much more than any material or accomplishment could ever provide for me,”</p>
 			</div>
 
-			<p>When he first came to the Kripalu Center, McRae was a different person, says Gary Halperin, who studied alongside him there. “He was kind of serious (and) introspective, a little bit closed off,” he says. McRae blossomed with yoga training and became more outgoing and comfortable in his environment, Halperin says.</p>
-
-			<p>Now McRae is a practicing yogi. He runs Global Yoga Journeys, a company that arranges international yoga and meditation retreats. He also teaches Kripalu at alleyCat Yoga in Columbia, which he founded in 2006 and moved to its current location in October 2011. Today’s alleyCat studio, swathed in purples and deep-greens, is high-ceilinged and airy with front-facing windows that let in two large rectangles of natural light. Here McRae can relax, breathe deeply and take life as it comes.</p>
-
+			<p>When he first came to the Kripalu Center, McRae was a different person, says Gary Halperin, who studied alongside him there. “He was kind of serious (and) introspective, a little bit closed off,” he says.</p>
+			<p>McRae blossomed with yoga training and became more outgoing and comfortable in his environment, Halperin says.</p>  
+			<p>Now McRae is a practicing yogi. He runs <a href="http://www.globalyogajourneys.com/aboutUs.html" target="_blank" class="body_link">Global Yoga Journeys,</a> a company that arranges international yoga and meditation retreats. He also teaches Kripalu yoga at Columbia’s <a href="http://www.alleycatyoga.com" target="_blank" class="body_link">alleyCat Yoga,</a> which he founded in 2006 and moved to its current location in October 2011. Today’s alleyCat studio, swathed in purples and deep-greens, is high-ceilinged and airy with front-facing windows that let in two large rectangles of natural light. Here McRae can relax, breathe deeply and take life as it comes.</p>
 			<p>“This feeling deep inside that I get is so much more than any material or accomplishment could ever provide for me,” McRae says. “And once you’ve tasted that, why would you not want more of that?</p>
 
 			<div class="subhead">For the mind, body and soul</div>
 
-			<p>McRae is one among a number of Americans who view yoga as spiritual. According to the Pew Forum on Religion and Public Life, one-fifth of the U.S. public is religiously unaffiliated. Of those, roughly three in 10 say they believe in yoga as a spiritual practice. According to the National Health Interview Survey, more than 13 million Americans used yoga in 2006. Yogic teachings are being implemented in public schools and even incorporated into Christian and Jewish worship services.</p>
-
-			<p>“It’s just a very different approach to body, in my opinion, to soul, to mind,” says William Claassen, a student at alleyCat. “It’s all about connecting those things together, as opposed to isolating them.”</p>
-
+				<p>McRae is one among a number of Americans who view yoga as spiritual. According to the Pew Forum on Religion and Public Life, <a href="http://www.pewforum.org/unaffiliated/nones-on-the-rise.aspx" target="_blank" class="body_link">one-fifth of the U.S. public is religiously unaffiliated.</a> Of those, roughly three in 10 say they believe in yoga as a spiritual practice. According to the National Health Interview Survey, more than 13 million Americans practiced yoga in 2006. Yogic teachings are being implemented in public schools and even incorporated into Christian and Jewish worship services.</p>
+			<p>“It’s just a very different approach to body, in my opinion, to soul, to mind,” says <a href="http://www.williamclaassen.com" target="_blank" class="body_link">William Claassen,</a> a student at alleyCat. “It’s all about connecting those things together, as opposed to isolating them.”</p>
 			<p>Emilie Sabath, another of McRae’s students, uses yoga to enhance her filmmaking. Practicing yoga makes her more grounded and receptive to the world, and McRae, who provides a safe and inviting space for his students, is a key part of that, she says.</p>
-
-			<p>Yoga appeals to McRae because it allows him to be himself without fear or restriction. “I would not want to be the person I was 20 years ago,” he says. “I’m much more peaceful, calm, centered, appreciating life just the way it is.”</p>
-
+			<p>Yoga appeals to McRae because it allows him to be himself without fear or restriction.</p>
+			<p>“I would not want to be the person I was 20 years ago,” he says. “I’m much more peaceful, calm, centered, appreciating life just the way it is.”</p>
 			<p>McRae shares his spiritual message with students but doesn’t go out of his way to invite new students to class. They come on their own, spurred by friends, family or even a Google search. His students follow their own path to yoga, just as he did.</p>
 
+		<div id="video_container">
+		<iframe id="video" src="http://www.youtube.com/embed/pD755Zu8Njc?list=UUOOD7UJ1b6o14kdWbP1H-kA" frameborder="0" allowfullscreen></iframe>
+	</div>
+
+
+		</article>	
+
+			<div id= "ken_sidebar">
+
+			<hr class="ken_line"></hr>	
+
+			<p class="ken_tag">The health effects/benefits of yoga</p>
+			<h3 class="story_headline">Stress Less</h3>
+			<h4 class="story_deck">Yoga and meditation cause changes in the brain</h4>
+
+		<article class="sidebar_text">		
+
+			<p>The practice of yoga includes many elements: poses, meditation, breathing and lifestyle choices. Studies show these practices have powerful effects on the way the mind and body work. Yoga is becoming increasingly popular in the health care field to treat stress and physical conditions, such as lower back pain, and can even affect brain structure.</p>
+
+			<p><a href="http://connects.catalyst.harvard.edu/Profiles/display/Person/12961" target="_blank" class="body_link">Sara Lazar,</a> instructor in the Department of Psychiatry at Harvard Medical School, has <a href="ttp://news.harvard.edu/gazette/story/2011/01/eight-weeks-to-a-better-brain/" target="_blank" class="body_link">done numerous studies</a> that chronicle the biology behind meditation. She became interested in the subject after attending yoga classes, which had an impact on her — in a good way.</p>
+
+			<p>Lazar used a brain scanner to produce images of subjects’ brain activity while they meditated.</p>
+
+			<p>Her results show the science behind yoga’s popularity.</p>
+
+			<p>“The amygdala (a part of the brain that is key to processing emotions) becomes less reactive after a length of time meditating, and it also becomes smaller,” she says. “The change in the amygdala correlated with changes in stress. There’s a real biological reason why they’re feeling less stress.”</p>
+
+			<p>She also found that the hippocampus, a brain structure integral for learning and memory, was larger in those who meditated, which suggests an increase in attention span. A subject’s capacity for empathy and compassion also increased after meditation.</p>
+
+			<p>Erika Patterson, a psychologist who fills in teaching classes at alleyCat and takes classes there herself, has seen these changes occur. She incorporates techniques of Asana and Mahayana yoga and meditation in her work with patients.</p>
+
+			<p>“I’ve witnessed as a professional in people’s healing process that it can be highly effective,” she says.
+			Close your eyes. Concentrate on your breath, noticing as it enters and leaves your body. Empty your mind. Concentrate on the present moment.</p>
+
+			<p>You’ve just changed the shape of your brain.</p>
+	
 		</article>
 
+			<div class="infobox">
+			<p><span class="infobox_head">Ken McRae’s alleyCat Yoga Classes</span></p>
+			<p><span class="infobox_bold">When:</span> Thursday, 5:30–6:45 p.m.; Friday, 4:30–5:45 p.m.; Saturday, 10:30–11:45 a.m.</p>
+			<p><span class="infobox_bold">Where:</span> 23 South Fourth St.</p>
+			<p><span class="infobox_bold">Cost:</span> $13–16</p>
+			<p><span class="infobox_bold">Call:</span> 864-4132</p>
+			<p><span class="infobox_bold">Online:</span> <a href="http://alleycatyoga.com" target="_blank" class="body_link">alleycatyoga.com</a></p>
+			</div>
+
+		</div>
 
 	</div>
 
@@ -172,59 +210,62 @@
 	<div id = "story_slider" class="royalSlider rsDefault wrapper">
 		<!-- Teaser heads must be 20 characters or less -->
 
+			
 			<div>
-				<img class="story_thumb" src="images/thumbs/allie_thumb.jpg"/>
-				<div class="story_nav_text">
-				<p class="story_tag">Allie Gassmann</p>
-				<h5 class="story_name">Acting on beliefs</h5>
-				<p class="story_summary">Gassmann tries to live with the entire planet in mind</p>
-				</div>
-			</div>
-
-			<div>
-				<img class="story_thumb" src="images/thumbs/jeff_thumb.jpg"/>
-				<div class="story_nav_text">
-				<p class="story_tag">Jeff Stack</p>
-				<h5 class="story_name">Plea for peace</h5>
-				<p class="story_summary">Jeff Stack advocates for nonviolence</p>
-				</div>
-			</div>
-
-			<div>
-				<img class="story_thumb" src="images/thumbs/lysaundra_thumb.jpg"/>
-				<div class="story_nav_text">
-				<p class="story_tag">LySaundra Campbell</p>
-				<h5 class="story_name">Defining grace</h5>
-				<p class="story_summary">LySaundra Campbell found the strength to move on from family tragedy</p>
-				</div>
-			</div>
-
-			<div>
-				<img class="story_thumb" src="images/thumbs/mary_thumb.jpg"/>
-				<div class="story_nav_text">
+				<img class="story_thumb" src="images/thumbs/mary_thumb.jpg" alt="Portrait of Mary Hartigan"/>
+				<a href=mary.html class="read"><div class="story_nav_text">
 				<p class="story_tag">Mary Hartigan</p>
 				<h5 class="story_name">Reinvention of life</h5>
-				<p class="story_summary">Mary Hartigan finds a family and a community in Judaism</p>
-				</div>
+				<p class="story_summary">Mary Hartigan finds a family and a community in Judaism. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
 			</div>
 
 			<div>
-				<img class="story_thumb" src="images/thumbs/theo_thumb.jpg"/>
-				<div class="story_nav_text">
+				<img class="story_thumb" src="images/thumbs/theo_thumb.jpg" alt="Portrait of Theo Tushaus"/>
+				<a href=theo.html class="read"><div class="story_nav_text">
 				<p class="story_tag">Theo Tushaus</p>
 				<h5 class="story_name">Leap from faith</h5>
-				<p class="story_summary">Theo Tushaus finds comfort in his sexuality after discovering an atheist group</p>
-				</div>
+				<p class="story_summary">Theo Tushaus finds comfort in his sexuality after discovering an atheist group. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
 			</div>
 
 			<div>
-				<img class="story_thumb" src="images/thumbs/elisabeth_thumb.jpg"/>
-				<div class="story_nav_text">
+				<img class="story_thumb" src="images/thumbs/elisabeth_thumb.jpg" alt="Portrait of Elisabeth Sobczak"/>
+				<a href=elisabeth.html class="read"><div class="story_nav_text">
 				<p class="story_tag">Elisabeth Sobczak</p>
 				<h5 class="story_name">A perfect storm</h5>
-				<p class="story_summary">Elisabeth Sobczak struggles and triumphs with self-acceptance and sexuality</p>
-				</div>
+				<p class="story_summary">Elisabeth Sobczak finds inner peace in her faith. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
 			</div>
+			
+			<div>
+				<img class="story_thumb" src="images/thumbs/lysaundra_thumb.jpg" alt="Portrait of LySaundra Campbell"/>
+				<a href=lysaundra.html class="read"><div class="story_nav_text">
+				<p class="story_tag">LySaundra Campbell</p>
+				<h5 class="story_name">Defining grace</h5>
+				<p class="story_summary">LySaundra Campbell saw God through pain and sorrow. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/allie_thumb.jpg" alt="Portrait of Allie Gassmann"/>
+				<a href=allie.html class="read"><div class="story_nav_text">
+				<p class="story_tag">Allie Gassmann</p>
+				<h5 class="story_name">Acting on beliefs</h5>
+				<p class="story_summary">Allie Gassmann tries to live with the entire planet in mind. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/jeff_thumb.jpg" alt="Portrait of Jeff Stack"/>
+				<a href=jeff.html class="read"><div class="story_nav_text">
+				<p class="story_tag">Jeff Stack</p>
+				<h5 class="story_name">Plea for peace</h5>
+				<p class="story_summary">Jeff Stack’s advocacy stems from his belief in nonviolence. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
+			</div>
+
+			
 
 	</div>	
 
@@ -233,11 +274,13 @@
 		<footer>
 			<ul class="footer">
 				
-				<li class="footer">Published by <span class="italics"><a href="http://www.voxmagazine.com/" id="vox">VOX Magazine</a></span></li>
+				<li class="footer">Published by <span class="italics"><a href="http://www.voxmagazine.com/" class="vox">VOX Magazine</a></span></li>
 								
-				<li class="right">About</li>
+				<li class="last"><a href="resources.html" class="vox">Resources</a></li>
 
-				<li class="right">The photos</li>
+				<li class="right"><a href="about.html" class="vox">About</li>
+
+				<li class="right"><a href="photos.html" class="vox">Photos</li>
 			</ul>
 
 		</footer>
@@ -246,10 +289,9 @@
 
 				<li class="fb-send" data-href="http://www.voxmagazine.com/" data-font="arial"></li>
 
-				<li><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a></li>
+				<li class="tweet"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a></li></div>
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 			</ul>
-
 	</body>
 	
 <script>

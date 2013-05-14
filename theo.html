@@ -19,7 +19,7 @@
 		<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="royalslider/royalslider.css">
 		<link rel="stylesheet" href="royalslider/skins/default/rs-default.css"> 
-
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 		<!-- Plugin requires jQuery 1.7+  -->
 		<!-- If you already have jQuery on your page, you shouldn't include it second time. -->
 		<script src='royalslider/jquery-1.8.3.min.js'></script>
@@ -27,79 +27,39 @@
 		<!-- Main slider JS script file --> 
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="royalslider/jquery.royalslider.min.js"></script>
-		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-		<script type="text/javascript">
-
-		  // 2. This code loads the IFrame Player API code asynchronously.
-		  var tag = document.createElement('script');
-		  tag.src = "http://www.youtube.com/iframe_api";
-		  var firstScriptTag = document.getElementsByTagName('script')[0];
-		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-		  // 3. This function creates an <iframe> (and YouTube player)
-		  //    after the API code downloads.
-		  var player;
-		  function onYouTubeIframeAPIReady() {
-		    player = new YT.Player('player', {
-		      events: {
-		        'onReady': onPlayerReady,
-		        //'onStateChange': onPlayerStateChange
-		      }
-		    });
-		  }
-
-		  // 4. The API will call this function when the video player is ready.
-			function onPlayerReady(event){
-			    $("#play_button").on('click', function() {
-			      player.playVideo();
-			      $('#imageID').css('display', 'none');
-			      $('.story_caption').css('margin-top', '.3em'); 
-			      $('#video_holder').css('display', 'block');			      
-			      $('iframe').css('display', 'block');
-			      $('#play_button').css('display', 'none');
-			      $('#pause_button').css('display', 'block');
-			    });
-
-			    $("#pause_button").on('click', function() {
-			      player.stopVideo(); 
-			      $('iframe').css('display', 'none');
-			      $('#video_holder').css('display', 'none');
-			      $('#imageID').css('display', 'block'); 
-			      $('#pause_button').css('display', 'none');
-			      $('#play_button').css('display', 'block');
-			    });
-			  }
-
-		</script>
 
 	</head>
 	
 	<body lang="en">
+
+		<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
 		
 		<div class="story_logo">		
 			<div class="wrapper">
 				<div class="logo">
 					<a class="logo" href="index.html"><h1 class="story_logo">Matters of Faith</h1></a>
-					<h2 id="story_logo_deck">The enlightenment from spirituality; the transformation of people</h2>
+					<h2 id="story_logo_deck">Spiritual journeys lead to enlightenment and transformation</h2>
 				</div>
 			<hr id="line-top" class="line wrapper"></hr>
 			</div>
 		</div>	
 
-		<div id="video_holder">
-		<iframe id="player" type="text/html" src="http://www.youtube.com/embed/UujCU3WU0EQ?enablejsapi=1&rel=0&controls=0&autoplay=0&showinfo=0&modestbranding=1" origin="http://www.bengal.missouri.edu/~wjg2q2/faith/lysaundra.html" frameborder="0"> </iframe>
-		</div>
-
 	<div>	
 		<div>
-		<img src="images/Theo_FINAL_web.jpg" class="story_img" id="imageID" />
+		<img src="images/Theo_FINAL_web.jpg" class="story_img" id="imageID" alt="Portrait of Theo Tushaus"/>
 
-		<div class="wrapper story_caption"><p>Theo Tushaus, an MU social work major, on his way to Social Work 1115 in the Arts and Sciences building on the morning of April 17.</p></div>
+		<div class="wrapper story_caption"><p>MU sophomore Theo Tushaus is an advocate for atheism and gay rights. He is a member of the MU Triangle Coalition and MU Skeptics, Atheist, Secular Humanist and Agnostics, both of which he says are central to his identity as an MU student.</p></div>
 		</div>
 
 		<div class="video_tease">
-			<a id="play_button">&nbsp;</a>
-			<a id="pause_button">&nbsp;</a>
+			<a href="#video_container" id="play_button">&nbsp;</a>
 			<h4 class="tease_headline">Theo Tushaus</h4>
 			<p class="tease_summary">MU student Theo Tushaus is a double minority. The gay atheist advocates for both groups through the University of Missouri Skeptics, Atheists, Secular Humanists and Agnostics and the MU Triangle Coalition.</p>
 		</div>
@@ -112,8 +72,8 @@
 		<h6 class="story_byline">By Ian Servantes</h6>
 
 		<aside class="sidebar">
-			<img src="images/Theo_2_FINAL_web.jpg" class="sidebar_image" alt="caption goes here" />
-			<p class="secondary_caption">Tushaus, a self-professed book worm, browses through books at Ellis Library on April 14.</p>
+			<img src="images/Theo_2_FINAL_web.jpg" class="sidebar_image" alt="Portrait of Theo Tushaus"/>
+			<p class="secondary_caption">Tushaus is a social work major and says he is also passionate about child welfare issues. He hopes to become an advocate for children after he graduates.</p>
 			<div class="sidebar_pull_quote">
 			<p>“There are things I want to change. I’m not going to sit back and let it happen.”</p>
 			</div>
@@ -121,62 +81,81 @@
 
 		<article class="story_text">
 
-			<p>How can morality exist without religion? What’s the meaning of life without God? Do you know you’ll go to hell for being gay? Those are some of the questions Theo Tushaus says he gets as a gay atheist. He tackles the questions the same way he did his conversion from Christianity — with logic.</p>
-			
-			<p>But being a double minority isn’t as easy as answering a few prodding questions. Tushaus, a sophomore at MU, is a strong advocate for both groups. He’s a member of University of Missouri Skeptics, Atheists, Secular Humanists and Agnostics, a group of nonbelievers who support human rights, and the president elect of the MU Triangle Coalition, a group for the members of the LGBTQ community and their allies.</p>
-			
-			<p>Although the number of atheists in America has risen by 3 percent since 2005, according to a Gallup poll, and support for gay rights has grown, neither demographic has enjoyed full freedom from discrimination. Another Gallup poll from 2012 reports that 54 percent of Americans would vote for an atheist president. It’s a majority but still behind all the other groups in the poll — 58 percent said they’d vote for a Muslim, and 68 percent would vote for gays and lesbians.</p>
-			
-			<p>Arguments for gay rights have reached the highest level, with the Supreme Court currently hearing two cases on gay marriage. In the U.S., support for gay marriage has grown 14 percent in the past 12 years but still sits at just more than 50 percent nationwide, according to a poll from the Pew Research Forum.</p>
-			
-			<p>Although Tushaus downplays his desire to lead, he displays all the necessary traits. When arguing for gay rights or secularism, he’s strikingly articulate. “There are things I want to change,” he says. “I’m not going to sit back and let it happen.”</p> 
+			<p>How can morality exist without religion? What’s the meaning of life without God? Do you know you’ll go to hell for being gay? Those are some of the questions Theo Tushaus says he gets as a gay atheist. He tackles the questions the same way he did his conversion from Christianity — with logic. <p>
 
-			<p>Tushaus wasn’t always this way. Becoming comfortable with his sexuality began with his leap from faith.</p>  
+
+			<p>But being a double minority isn’t as easy as answering a few prodding questions. Tushaus, a sophomore at MU, is a strong advocate for both groups. He’s a member of <a href="http://musasha.wordpress.com/"  target="_blank" class="body_link"
+>University of Missouri Skeptics, Atheists, Secular Humanists and Agnostics,</a> a group of nonbelievers who support human rights, and the president elect of the <a href="http://trico.students.missouri.edu/" target="_blank" class="body_link">MU Triangle Coalition,</a> a group for the members of the LGBTQ community and their allies. </p>
+			
+			
+			<p>Although the number of atheists in America has risen by 3 percent since 2005, according to a Gallup poll, and support for gay rights has grown, neither demographic has enjoyed full freedom from discrimination. Another Gallup poll from 2012 reports that 54 percent of Americans would vote for an atheist president. It’s a majority but still behind all the other groups in the poll — 58 percent said they’d vote for a Muslim, and 68 percent would vote for gays and lesbians. </p>
+			
+			
+			<p>Arguments for gay rights have reached the highest level, with the Supreme Court currently hearing two cases on gay marriage. In the U.S., support for gay marriage has grown 14 percent in the past 12 years but still sits at just more than 50 percent nationwide, according to a poll from the Pew Research Forum. </p>
+			
+			
+			<p>Although Tushaus downplays his desire to lead, he displays all the necessary traits. When arguing for gay rights or secularism, he’s strikingly articulate. “There are things I want to change,” he says. “I’m not going to sit back and let it happen.” </p>
+			
+			
+			<p>Tushaus wasn’t always this way. Becoming comfortable with his sexuality began with his leap from faith.  </p>  
 
 			<div class="subhead">Taking the leap</div>
 			
 			<p>Tushaus grew up in a liberal Christian household in St. Joseph. He went to church regularly with his parents, Dave and Lynn, but the family didn’t talk about religion often. “For me, religion is a personal matter,” Lynn Tushaus says. “I’m not real vocal about my religion.”</p>
+
+
+			<p>It wasn’t until his freshman year of high school when Tushaus found someone with whom to discuss God — or a lack thereof. He’d just joined the debate team and found out an older teammate was an atheist, the first Tushaus knew. The exposure led him to question his own beliefs. </p>
 			
-			<p>It wasn’t until his freshman year of high school when Tushaus found someone with whom to discuss God — or a lack thereof. He’d just joined the debate team and found out an older teammate was an atheist, the first Tushaus knew. The exposure led him to question his own beliefs.</p>
 			
-			<p>First, he questioned hell. Tushaus didn’t like the idea of an eternal punishment for a finite sin. He didn’t think it was logical or rational. From there came the conclusion that if Christianity was wrong about hell, the whole thing could be false. For about a week, Tushaus believed there could be a God separate from the world’s religions and became a deist.</p>
+		<p>	First, he questioned hell. Tushaus didn’t like the idea of an eternal punishment for a finite sin. He didn’t think it was logical or rational. From there came the conclusion that if Christianity was wrong about hell, the whole thing could be false. For about a week, Tushaus believed there could be a God separate from the world’s religions and became a deist. </p>
 			
-			<p>“Even that takes a leap of faith,” Tushaus says of his short-lived view, “because scientifically we can’t prove anything beyond our experiences exist.”</p>
 			
-			<p>So Tushaus became an atheist.</p>
+			<p>“Even that takes a leap of faith,” Tushaus says of his short-lived view, “because scientifically we can’t prove anything beyond our experiences exist.” </p>
 			
-			<p>Dave Muscato, public relations director of American Atheists, Inc. in Cranford, N.J. and a friend of Tushaus, thinks that atheism has spread because communication has become much easier with technology. Muscato, also a former vice president of MU SASHA, points out that in the past, people were only exposed to the beliefs of their parents, their preacher and, perhaps occasionally, an out-of-towner.</p>
+			
+			<p>So Tushaus became an atheist. </p>
+			
+			
+			<p>Dave Muscato, public relations director of American Atheists, Inc. in Cranford, N.J. and a friend of Tushaus, thinks that atheism has spread because communication has become much easier with technology. Muscato, also a former vice president of MU SASHA, points out that in the past, people were only exposed to the beliefs of their parents, their preacher and, perhaps occasionally, an out-of-towner. </p>
 
 			<div class="subhead">A safe haven</div>
 			
-			<p>Becoming comfortable with his sexuality was the next hurdle for Tushaus. He started dating a girl whom he met at a debate tournament his senior year and tried to convince himself that he could be bisexual.</p>
-			
-			<p>“Stupid,” he says looking back, then laughs. Bisexuality was a façade for Tushaus, not the answer to his true sexual orientation.</p>
-			
-			<p>It didn’t help that people in his high school, even his friends, would use slurs. Tushaus says the environment didn’t allow him to be comfortable with his sexuality.</p>
-			
-			<p>When he started his freshman year at MU in 2011, Tushaus attended weekly meetings for MU SASHA. In the group, he found another safe haven to talk about taboo topics. In addition to religion, he was able to discuss homosexuality with similar minded, nonjudgmental peers.</p>
-			
-			<p>“Before that, I just sort of had the Internet,” Tushaus says. “Chat rooms and forums only go so far to make you comfortable.”</p>
+			<p>Becoming comfortable with his sexuality was the next hurdle for Tushaus. He started dating a girl he met at a debate tournament his senior year and tried to convince himself that he could be bisexual.</p>
 
-			<p>Then, later in his freshman year, Tushaus just blurted it out. He was talking with friends on a September evening in a Hatch Hall room when a female friend mentioned liking boys. It was hardly a bombshell, but then Tushaus agreed.</p>
 
-			<div class="pull_quote">
-			<p>“There are things I want to change. I’m not going to sit back and let it happen.”</p>
-			</div>
-
-			<p>It was the first time he had even admitted it to himself, let alone someone else. A strange mix of emotions spiraled through his mind — fear and happiness, anxiety and relief.</p>
-
+			<p>“Stupid,” he says looking back, then laughs. Bisexuality was a façade for Tushaus, not the answer to his true sexual orientation.</p> 
+			
+			
+			<p>It didn’t help that people in his high school, even his friends, would use slurs. Tushaus says the environment didn’t allow him to be comfortable with his sexuality. </p>
+			
+			
+			<p>When he started his freshman year at MU in 2011, Tushaus attended weekly meetings for MU SASHA. In the group, he found another safe haven to talk about taboo topics. In addition to religion, he was able to discuss homosexuality with similar-minded, nonjudgmental peers. </p>
+						
+			<p>“Before that, I just sort of had the Internet,” Tushaus says. “Chat rooms and forums only go so far to make you comfortable.” </p>
+			
+			
+			<p>Then, later in his freshman year, Tushaus just blurted it out. He was talking with friends on a September evening in Hatch Hall when a female friend mentioned liking boys. It was hardly a bombshell, but then Tushaus agreed. </p>
+			
+			
+			<p>It was the first time he had even admitted it to himself, let alone someone else. A strange mix of emotions spiraled through his mind — fear and happiness, anxiety and relief. </p>
+			
+			
 			<p>“When you’re in denial, you just have this burden on you that feels like it’s separate from your body, and it’s pressing on your mind,” Tushaus says. “All of the sudden, that was gone.”</p>
-
-			<p>Tushaus soon began hanging out at the LGBTQ Resource Center and attending meetings for the Triangle Coalition. He was elected president a year later.</p>
-
+			
+			<p>Tushaus soon began hanging out at the <a href="http://lgbtq.missouri.edu/" target="_blank" class="body_link">LGBTQ Resource Center</a> and attending meetings for the Triangle Coalition. He was elected president a year later. </p>
+			
+			
 			<p>It couldn’t have happened without joining the group of nonbelievers — not so smoothly, so quickly.</p>
-
-			<p>“I definitely wouldn’t be the person I am today,” Tushaus says of a life without SASHA. He might have come out eventually but would still probably be uncomfortable identifying as a gay man and definitely wouldn’t have become as outspoken.</p>
-
+			
+			
+			<p>“I definitely wouldn’t be the person I am today,” Tushaus says of a life without SASHA. He might have come out eventually but would still probably be uncomfortable identifying as a gay man and definitely wouldn’t have become as outspoken.</p> 
+			
+			
 			<p>“I don’t think he’s changed as much as he’s become himself,” Muscato says.</p>
 
+		<div id="video_container">
+		<iframe id="video" src="http://www.youtube.com/embed/UujCU3WU0EQ?list=UUOOD7UJ1b6o14kdWbP1H-kA" frameborder="0" allowfullscreen></iframe>
+	</div>
 
 		</article>
 
@@ -185,63 +164,61 @@
 
 	<hr class="line2"></hr>	
 
-<div id = "story_slider" class="royalSlider rsDefault wrapper">
+	<div id = "story_slider" class="royalSlider rsDefault wrapper">
 		<!-- Teaser heads must be 20 characters or less -->
 			<div>
-
-				<img class="story_thumb" src="images/thumbs/ken_thumb.jpg"/>
-				<div class="story_nav_text">
-				<p class="story_tag">Ken McRae</p>
-				<h5 class="story_name">A yogic path</h5>
-				<p class="story_summary">Businessman-turned-yoga-teacher takes a complex spiritual journey</p>
-				</div>
-			</div>
-
-			<div>
-				<img class="story_thumb" src="images/thumbs/allie_thumb.jpg"/>
-				<div class="story_nav_text">
-				<p class="story_tag">Allie Gassmann</p>
-				<h5 class="story_name">Acting on beliefs</h5>
-				<p class="story_summary">Gassmann tries to live with the entire planet in mind</p>
-				</div>
-			</div>
-
-			<div>
-				<img class="story_thumb" src="images/thumbs/jeff_thumb.jpg"/>
-				<div class="story_nav_text">
-				<p class="story_tag">Jeff Stack</p>
-				<h5 class="story_name">Plea for peace</h5>
-				<p class="story_summary">Jeff Stack advocates for nonviolence</p>
-				</div>
-			</div>
-
-			<div>
-				<img class="story_thumb" src="images/thumbs/lysaundra_thumb.jpg"/>
-				<div class="story_nav_text">
+				<img class="story_thumb" src="images/thumbs/lysaundra_thumb.jpg" alt="Portrait of LySaundra Campbell"/>
+				<a href=lysaundra.html class="read"><div class="story_nav_text">
 				<p class="story_tag">LySaundra Campbell</p>
 				<h5 class="story_name">Defining grace</h5>
-				<p class="story_summary">LySaundra Campbell found the strength to move on from family tragedy</p>
-				</div>
+				<p class="story_summary">LySaundra Campbell saw God through pain and sorrow. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
+			</div>
+			
+			<div>
+				<img class="story_thumb" src="images/thumbs/ken_thumb.jpg" alt="Portrait of Ken McRae"/>
+				<a href=ken.html class="read"><div class="story_nav_text">
+				<p class="story_tag">Ken McRae</p>
+				<h5 class="story_name">Living La Vida Yoga</h5>
+				<p class="story_summary">Ken McRae found spirituality through yoga. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
 			</div>
 
 			<div>
-				<img class="story_thumb" src="images/thumbs/mary_thumb.jpg"/>
-				<div class="story_nav_text">
+				<img class="story_thumb" src="images/thumbs/allie_thumb.jpg" alt="Portrait of Allie Gassmann"/>
+				<a href=allie.html class="read"><div class="story_nav_text">
+				<p class="story_tag">Allie Gassmann</p>
+				<h5 class="story_name">Acting on beliefs</h5>
+				<p class="story_summary">Allie Gassmann tries to live with the entire planet in mind. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/jeff_thumb.jpg" alt="Portrait of Jeff Stack"/>
+				<a href=jeff.html class="read"><div class="story_nav_text">
+				<p class="story_tag">Jeff Stack</p>
+				<h5 class="story_name">Plea for peace</h5>
+				<p class="story_summary">Jeff Stack’s advocacy stems from his belief in nonviolence. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/mary_thumb.jpg" alt="Portrait of Mary Hartigan"/>
+				<a href=mary.html class="read"><div class="story_nav_text">
 				<p class="story_tag">Mary Hartigan</p>
 				<h5 class="story_name">Reinvention of life</h5>
-				<p class="story_summary">Mary Hartigan finds a family and a community in Judaism</p>
-				</div>
+				<p class="story_summary">Mary Hartigan finds a family and a community in Judaism. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
 			</div>
 
 			<div>
-				<img class="story_thumb" src="images/thumbs/elisabeth_thumb.jpg"/>
-				<div class="story_nav_text">
+				<img class="story_thumb" src="images/thumbs/elisabeth_thumb.jpg" alt="Portrait of Elisabeth Sobczak"/>
+				<a href=elisabeth.html class="read"><div class="story_nav_text">
 				<p class="story_tag">Elisabeth Sobczak</p>
 				<h5 class="story_name">A perfect storm</h5>
-				<p class="story_summary">Elisabeth Sobczak struggles and triumphs with self-acceptance and sexuality.</p>
-				</div>
+				<p class="story_summary">Elisabeth Sobczak finds inner peace in her faith. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
 			</div>
-
 	</div>	
 
 		<hr class="line wrapper"></hr>
@@ -249,11 +226,13 @@
 		<footer>
 			<ul class="footer">
 				
-				<li class="footer">Published by <span class="italics"><a href="http://www.voxmagazine.com/" id="vox">VOX Magazine</a></span></li>
+				<li class="footer">Published by <span class="italics"><a href="http://www.voxmagazine.com/" class="vox">VOX Magazine</a></span></li>
 								
-				<li class="right">About</li>
+				<li class="last"><a href="resources.html" class="vox">Resources</a></li>
 
-				<li class="right">The photos</li>
+				<li class="right"><a href="about.html" class="vox">About</li>
+
+				<li class="right"><a href="photos.html" class="vox">Photos</li>
 			</ul>
 
 		</footer>
@@ -262,7 +241,7 @@
 
 				<li class="fb-send" data-href="http://www.voxmagazine.com/" data-font="arial"></li>
 
-				<li><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a></li>
+				<li class="tweet"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a></li></div>
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 			</ul>
 

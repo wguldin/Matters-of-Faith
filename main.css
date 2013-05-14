@@ -111,7 +111,7 @@ body {
 /*HIDEAWAYS --------------------------------------------------------------------------------*/
 
 #slider1, #slider3, #slider1_tag, #deck, #story_logo_deck, .line-under, #line-top,
-.line-deep, div.intro_second, .video_tag, .sidebar, .video_tease, #player, #video_holder, span.thumb_word {
+.line-deep, div.intro_second, .video_tag, .sidebar, .video_tease, #player, #video_holder, span.thumb_word, #ken_sidebar_sidebar, #video_container, #video {
   display:none;
 }
 
@@ -147,8 +147,20 @@ a:active {
 }
 
 a.logo:link,
-a.logo:visited,
-a.logo:hover,
+a.logo:visited {
+  color: #000 !important;
+}
+
+a.logo:hover {
+  color: #696969 !important;
+  opacity: 0.7 !important;
+  transition: opacity .5s ease-in-out !important;
+  -webkit-transition: opacity .5s ease-in-out !important;
+  -moz-transition: opacity .5s ease-in-out!important;
+  -o-transition: opacity .5s ease-in-out !important;
+  -ms-transition: opacity .5s ease-in-out !important;
+}
+
 a.logo:active {
   color: #000 !important;
 }
@@ -167,17 +179,22 @@ a.read:active {
   color: #000 !important;
 }
 
-/*
-span.thumb_word {
-  border: 1px solid #ccc;
-  font-size: 10px;
-  text-transform: uppercase;
+a.body_link:link {
+  font-weight: bold;
+  color: #000 !important;
 }
 
-span.thumb_holder:hover span.thumb_word {
-  display: block;
+a.body_link:visited {
+  color: #696969 !important;
 }
-*/
+
+a.body_link:hover {
+  color: #696969 !important;
+}
+
+a.body_link:active {
+    color: #000 !important;
+}
 
 /*SLIDESHOW --------------------------------------------------------------------------------*/
 /*SLIDESHOW --------------------------------------------------------------------------------*/
@@ -185,7 +202,7 @@ span.thumb_holder:hover span.thumb_word {
 /*SLIDESHOW --------------------------------------------------------------------------------*/
 
 h5.video_name {
-  font-family: 'BenchNine', sans-serif;
+  font-family: 'BenchNine', sans-serif !important;
   font-weight: 700;
   font-size: 1.9em;
   text-transform: uppercase;
@@ -201,6 +218,7 @@ p.video_tag {
 
 p.video_summary {
   font-family: 'DroidSans', sans-serif;
+  font-weight: 400;
   font-size: .9em;
   line-height: 130%;
   width:100%;
@@ -255,13 +273,15 @@ p.video_summary {
   div.story_caption {
     font-size: .9em;
     font-family: 'DroidSans', sans-serif;
+    font-weight: 400;
     line-height: 130%;
     margin-top: -.2em;
     margin-left: .5%;
   }
 
   h6.story_byline {
-    font-family: 'DroidSans-Bold', sans-serif;
+    font-family: 'DroidSans', sans-serif;
+    font-weight: 700;
     font-size: 1em;
     text-transform: uppercase;
 
@@ -351,8 +371,60 @@ p.video_summary {
     width: 94%;
   }
 
+  hr.ken_line {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    padding-bottom: .4em;
+    margin-top: 1em;
+    width: 100%;
+    margin-right: 3%;
+  }
+
+  div.infobox {
+    font-family: 'DroidSans', sans-serif;
+    font-weight: 400;
+  }
+
+  span.infobox_head {
+    font-family: 'DroidSans', sans-serif;
+    font-weight: 700;    
+    font-size: 1.2em;
+  }
+
+  span.infobox_bold {
+    font-family: 'DroidSans', sans-serif;
+    font-weight: 700;    
+  }
+
+  article.sidebar_text {
+    font-family: 'Georgia', serif;
+    font-size: 1em;
+    line-height: 130%
+  }
+
+  article.sidebar_text > p {
+    margin-bottom: 1em;
+  }
+  
+  ul.infobox_list {
+    margin-left: 5%;
+    list-style-type: square;
+  }
+
+  p.ken_tag {
+    font-family: 'DroidSans', sans-serif;
+    font-weight: 700;    
+    font-size: .9em;
+    text-transform: uppercase;
+    margin-bottom: -1.2em;
+  }  
+
   p.story_summary {
     font-family: 'DroidSans';
+    font-weight: 400;
     font-size: 1em;
     line-height: 120%;
     margin-top: .5em;
@@ -370,20 +442,14 @@ p.video_summary {
 /*PHOTO PAGE STYLES --------------------------------------------------------------------------------*/
 /*PHOTO PAGE STYLES --------------------------------------------------------------------------------*/
 
-/*#slider4 {
-  width: 94%;
-  margin-left: 3%;
-  margin-right: 3%;
-  height: 13em;
-}*/
-
   #photo_holder {
     position: relative;
-    padding-bottom: 54.25%;
+    padding-bottom: 90.25%;
     width: 94%;
     margin-left: 3%;
     margin-right: 3%;
     margin-top: -1em;
+    margin-bottom: 2em;
     height: 0;
   }
 
@@ -395,21 +461,95 @@ p.video_summary {
   height: 100%;
   }
 
-img.slider4 {
-  width: 100%;
-}
+  img.slider4 {
+    width: 100%;
+  }
 
-p.photo_caption {
-    font-size: .9em;
-    font-family: 'DroidSans', sans-serif;
-    line-height: 130%;
-    margin-top: -.2em;
-    margin-left: .5%;
-}
+  p.photo_caption {
+      font-size: .9em;
+      font-family: 'DroidSans', sans-serif;
+      font-weight: 400;
+      line-height: 130%;
+      margin-top: -.2em;
+      margin-left: .5%;
+  }
 
   p.attribution {
     text-align: right;
     margin-top: -.5em;
+  }
+
+  span.photo_direction {
+    font-family: 'DroidSans', sans-serif;
+    font-weight: 700;    
+  }
+
+  article.photo_blurb {
+    font-family: 'Georgia', serif;
+    font-size: 1em;
+    margin-right: 5%;
+  }
+
+  article.photo_blurb > p {
+    margin-bottom: 1em;
+  }
+
+  #naveen {
+    font-weight: bold;
+  }
+
+  #naveen:hover {
+    color: #000;
+  }
+
+/*ABOUT PAGE STYLES --------------------------------------------------------------------------------*/
+/*ABOUT PAGE STYLES --------------------------------------------------------------------------------*/
+/*ABOUT PAGE STYLES --------------------------------------------------------------------------------*/
+/*ABOUT PAGE STYLES --------------------------------------------------------------------------------*/  
+
+  img.vox_logo {
+    width: 16em;
+    margin-left: 3%;
+    margin-top: .5em;
+    margin-bottom: .3em;
+  }
+
+  article.about {
+    font-family: 'Georgia', serif;
+    font-size: 1em;
+    margin-right: 5%;
+  }
+
+  article.about > p {
+    margin-bottom: 1em;
+  }
+
+  span.credit {
+    font-weight: bold;
+  }
+
+/*RESOURCES PAGE STYLES --------------------------------------------------------------------------------*/
+/*RESOURCES PAGE STYLES --------------------------------------------------------------------------------*/
+/*RESOURCES PAGE STYLES --------------------------------------------------------------------------------*/
+/*RESOURCES PAGE STYLES --------------------------------------------------------------------------------*/    
+
+  #graphic_holder {
+    position: relative;
+    padding-bottom: 100%;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: -1em;
+    margin-bottom: 1em;
+    height: 0;
+  }
+
+  #slider5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
 /*HOME PAGE STYLES --------------------------------------------------------------------------------*/
@@ -506,7 +646,13 @@ li.footer {
 
 li.right {
   float: right;
-  margin-right: 1em;
+  margin-right: .7em;
+  list-style:none;
+}
+
+li.last {
+  float: right;
+  margin-right: 0em;
   list-style:none;
 }
 
@@ -525,12 +671,17 @@ ul.share {
   height: 2em;
 }
 
+li.tweet {
+  float: left;
+}
+
 .video_text {
   margin-left: .4em;
 }
 
 span.read {
-  font-family: 'DroidSans-Bold';
+  font-family: 'DroidSans';
+  font-weight: 700;  
   color: #494f4e;
   }
 
@@ -598,6 +749,7 @@ footer {
     margin-bottom: 1.1em;  }
 }
 
+
 @media screen and (min-width: 28em) {
 
   .royalSlider{
@@ -606,6 +758,17 @@ footer {
 }
   p.video_summary {
     margin-bottom: -3.5em;
+  }
+
+  #photo_holder {
+    position: relative;
+    padding-bottom: 78%;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: -1em;
+    margin-bottom: 0em;
+    height: 0;
   }
 
 }
@@ -641,6 +804,20 @@ footer {
     height: 31em;
     margin-bottom: 1.5em;
   }
+
+  #photo_holder {
+    padding-bottom: 68%;
+    margin-bottom: 2em;
+  }
+
+  div.photo_blurb {
+    margin-bottom: 2em;
+  }
+
+  #graphic_holder {
+    padding-bottom: 90%;
+    margin-bottom: 1em;
+}
 
 }
 
@@ -704,7 +881,7 @@ footer {
   }
 
   ul.footer {
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
 
 /*STORY STYLES @ BREAKPOINT*/
@@ -718,7 +895,7 @@ footer {
   }
 
   #story_logo_deck {
-    font-size: 1.1em;
+    font-size: 1.05em;
     font-family: 'Georgia', serif;
     text-align: left;
     line-height: 1.3em;
@@ -793,8 +970,6 @@ footer {
     padding-bottom: .5em;
   }
 
-
-
 }
 
 @media screen and (min-width: 37em) {
@@ -805,6 +980,14 @@ footer {
     height: 36em;
     margin-bottom: 1em;
   }
+
+  #photo_holder {
+    padding-bottom: 62%;
+    margin-bottom: 1em;
+  }
+
+
+
 }
 
 
@@ -864,7 +1047,7 @@ footer {
 
   div.intro_second {
 
-    margin-top: 31em;
+    margin-top: 33em;
     
     background-color:rgb(255, 255, 255);
     background-color:rgba(255, 255, 255, .7);
@@ -900,7 +1083,7 @@ footer {
     margin-left: 1.5em;
 
     padding-bottom: .5em;
-}
+  }
 
   #slider1 {
     display:block;
@@ -941,6 +1124,7 @@ footer {
 
     display: block;
     font-family: 'DroidSans', sans-serif;
+    font-weight: 400;
     line-height: 100%;
   }
 
@@ -1054,6 +1238,14 @@ footer {
     margin-right: 0%;
   }
 
+  #ken_sidebar {
+    display:none;  
+  }
+
+  #allie_sidebar {
+    display: none;
+  }
+
   div.sidebar_pull_quote {
     font-family: 'BenchNine', sans-serif;
     font-style: italic;
@@ -1118,6 +1310,7 @@ footer {
     width: 100%;
     font-size: .8em;
     font-family: 'DroidSans', sans-serif;
+    font-weight: 400;
     line-height: 130%;
     margin-top: -.5em;
     margin-left: 0%;
@@ -1127,7 +1320,107 @@ footer {
     width: 100%;
   }
 
-} 
+  /*------------------------------Sidebar on Ken*/
+
+  #ken_sidebar_sidebar {
+    display: block;
+    font-family: 'DroidSans', sans-serif;
+    font-weight: 400;
+    font-size: .8em;
+    line-height: 130%;
+  }
+
+  .ken_tag {
+    margin-bottom: -4.7em;
+  }
+
+  .ken_headline {
+    font-family: 'BenchNine', sans-serif;
+    font-weight: 400;
+    font-size: 4em;
+    text-transform: uppercase;
+    margin-bottom: -.04em;
+  }
+
+  .ken_deck {
+    margin-bottom: 1em;
+    font-family: 'BenchNine', sans-serif;
+    font-weight: 300;
+    font-size: 1.6em;
+    line-height: 110%;
+    color: #767676;
+    margin-top: .8em;
+    margin-bottom: .8em;
+  }
+
+  article.sidebar_text {
+    font-family: 'DroidSans', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 130%;
+  }
+
+  article.sidebar_text > p {
+    margin-bottom: 1em;
+  }
+
+  h5.infobox_head {
+    margin-top: .5em;
+    margin-bottom: 1em;
+    font-size: 1.4em;
+  }
+
+  div.infobox > p {
+    margin-bottom: .4em;
+  }
+
+  span.infobox_head {
+    font-family: 'BenchNine', sans-serif;
+    font-weight: 700;
+    font-size: 2.2em;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+
+  ul.infobox_list {
+    margin-top: 1em;
+  }
+
+  ul.infobox_list > li {
+    font-size: 1.1em;
+    line-height: 110%;
+    margin-bottom: .8em;
+  }
+
+  p.ken_tag {
+    margin-bottom: -4em;
+}
+
+
+  /*------------------------------Photo page break*/
+
+  #photo_holder {
+    padding-bottom: 58%;
+    margin-bottom: 1em;
+  }
+
+  article.photo_blurb {
+    width: 80%;
+  }
+
+  /*------------------------------About page break*/
+
+  article.about {
+    width: 80%;
+  }
+
+  #graphic_holder {
+    padding-bottom: 80%;
+    margin-bottom: 1em;
+}
+
+
+}
 
 @media screen and (min-width: 48.5em) {
 
@@ -1146,7 +1439,7 @@ footer {
 }
 
   div.intro_second {
-      margin-top: 32em;
+      margin-top: 34em;
   }
 
   div.video_img {
@@ -1157,6 +1450,13 @@ footer {
   margin-left: 72%;
   margin-right: 1%;
   width: 12em;
+}
+
+  #photo_holder {
+    padding-bottom: 55%;
+    margin-bottom: 1em;
+  }
+
 }
 
 @media screen and (min-width: 50em) {
@@ -1197,7 +1497,7 @@ footer {
 @media screen and (min-width: 52em) {
 
   div.intro_second {
-    margin-top: 40em;
+    margin-top: 39em;
   }
 
   p.intro_second {
@@ -1228,27 +1528,27 @@ footer {
   background-color: #000;
   background-color: rgba(0,0,0,0.75);
   *background-color: #000;\
-
   padding-bottom: 1em;
   }
 
-  #pause_button {
-  width:3em;
-  display:none;
-  height:3em;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  transition: .3s;
+  #video_container {
+  display:block;
+  position: relative;
+  padding-bottom: 70%;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: 0em;
+  height: 0;
+  }
 
-  background:url(royalslider/skins/default/rs-default_3.png) no-repeat 50%, -25%;
-  background-color: #000;
-  background-color: rgba(0,0,0,0.75);
-  *background-color: #000;\
-
-  padding-bottom: 1em;
+  #video {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   }
 
   #video_holder {
@@ -1279,6 +1579,7 @@ footer {
 
   p.tease_summary {
     font-family: 'DroidSans', sans-serif;
+    font-weight: 400;
     font-size: .9em;
     line-height: 110%;
   }
@@ -1304,6 +1605,13 @@ footer {
     margin-top: -11.5em;
 }
 
+  #graphic_holder {
+    width: 75%;
+    padding-bottom: 65%;
+}
+
+}
+
 /* @media screen and (min-width: 888px) */
 @media screen and (min-width: 55.5em) {
   body {
@@ -1312,6 +1620,10 @@ footer {
     font-size: 1.0625em;
   }
 
+  #photo_holder {
+    padding-bottom: 53%;
+    margin-bottom: 1em;
+  }
 
 }
 
@@ -1346,23 +1658,14 @@ footer {
     font-size: 2.8em;
   }
 
-/*  .thumb_img {
-    width: 7em !important;
-    height: auto !important;
-    margin-top: .5em;
-    margin-right: 2em;
-    float: left;
-}
-
-  li.thumb_list {
-    width: 7em;
-    font-size: .7em;
-    margin-right: 5.8em;
-}*/
-
   div.intro_second {
-    margin-top: 39em;
+    margin-top: 37em;
     font-size: 1.1em;
+  }
+
+  #photo_holder {
+    padding-bottom: 52%;
+    margin-bottom: 1em;
   }
 
 }
@@ -1378,12 +1681,6 @@ footer {
     margin: 0 16.666666666666664%;
   }
 
-
-/*
-}
-
-@media screen and (min-width: 68em) {
-*/
   #line-top {
     display:none;
   }
@@ -1424,7 +1721,12 @@ footer {
 
   ul.footer {
     margin-top: 1em;
-    padding-bottom: 1em;
+    padding-bottom: .25em;
+    font-size: 1.6em;
+  }
+
+  li.right {
+    margin-right: 1em;
   }
 
   #slider2 {
@@ -1453,6 +1755,7 @@ footer {
     width: 5em;
     font-size: .8em;
     font-family: 'DroidSans', sans-serif;
+    font-weight: 400;
     margin-right: 3.1em;
 }
 
@@ -1461,8 +1764,9 @@ footer {
   }
 
   div.video_text {
-  width: 20em;
-  margin-right: 3%;
+  width: 25%;
+  margin-right: 5%;
+  margin-left: 70%;
 }
 
   div.logo {
@@ -1470,7 +1774,7 @@ footer {
   }
 
   div.intro_second {
-    margin-top: 39em;
+    margin-top: 40em;
     font-size: 1.2em;
   }
 
@@ -1485,7 +1789,6 @@ footer {
   h1.story_logo {
     margin-top: .7em;
   }
-
 
   div.story_nav_text {
     margin-right: 40%;
@@ -1509,7 +1812,19 @@ footer {
     width: 5.4em;
     font-size: .8em;
     font-family: 'DroidSans', sans-serif;
+    font-weight: 400;
     margin-right: 3.53em;
+}
+
+  div.video_text {
+  width: 32%;
+  margin-right: 5%;
+  margin-left: 67%;
+}  
+
+  #photo_holder {
+    padding-bottom: 49%;
+    margin-bottom: 1em;
 }
 
 }
@@ -1520,6 +1835,15 @@ footer {
     /* Zoom baseline grid to 17/16 = 1.0625 */  
   max-width: 70em;
 }
+
+  div.intro_second {
+    margin-top: 44.5em;
+    font-size: 1.2em;
+  }
+
+  #graphic_holder {
+    padding-bottom: 62%;
+  }
 
 }
 

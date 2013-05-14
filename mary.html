@@ -19,7 +19,7 @@
 		<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="royalslider/royalslider.css">
 		<link rel="stylesheet" href="royalslider/skins/default/rs-default.css"> 
-
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 		<!-- Plugin requires jQuery 1.7+  -->
 		<!-- If you already have jQuery on your page, you shouldn't include it second time. -->
 		<script src='royalslider/jquery-1.8.3.min.js'></script>
@@ -27,81 +27,42 @@
 		<!-- Main slider JS script file --> 
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="royalslider/jquery.royalslider.min.js"></script>
-		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-		<script type="text/javascript">
-
-		  // 2. This code loads the IFrame Player API code asynchronously.
-		  var tag = document.createElement('script');
-		  tag.src = "http://www.youtube.com/iframe_api";
-		  var firstScriptTag = document.getElementsByTagName('script')[0];
-		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-		  // 3. This function creates an <iframe> (and YouTube player)
-		  //    after the API code downloads.
-		  var player;
-		  function onYouTubeIframeAPIReady() {
-		    player = new YT.Player('player', {
-		      events: {
-		        'onReady': onPlayerReady,
-		        //'onStateChange': onPlayerStateChange
-		      }
-		    });
-		  }
-
-		  // 4. The API will call this function when the video player is ready.
-			function onPlayerReady(event){
-			    $("#play_button").on('click', function() {
-			      player.playVideo();
-			      $('#imageID').css('display', 'none');
-			      $('.story_caption').css('margin-top', '.3em'); 
-			      $('#video_holder').css('display', 'block');			      
-			      $('iframe').css('display', 'block');
-			      $('#play_button').css('display', 'none');
-			      $('#pause_button').css('display', 'block');
-			    });
-
-			    $("#pause_button").on('click', function() {
-			      player.stopVideo(); 
-			      $('iframe').css('display', 'none');
-			      $('#video_holder').css('display', 'none');
-			      $('#imageID').css('display', 'block'); 
-			      $('#pause_button').css('display', 'none');
-			      $('#play_button').css('display', 'block');
-			    });
-			  }
-
-		</script>
 
 	</head>
 	
 	<body lang="en">
+
+		<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
 		
 		<div class="story_logo">		
 			<div class="wrapper">
 				<div class="logo">
 					<a class="logo" href="index.html"><h1 class="story_logo">Matters of Faith</h1></a>
-					<h2 id="story_logo_deck">The enlightenment from spirituality; the transformation of people</h2>
+					<h2 id="story_logo_deck">Spiritual journeys lead to enlightenment and transformation</h2>
 				</div>
 			<hr id="line-top" class="line wrapper"></hr>
 			</div>
 		</div>	
 
-		<div id="video_holder">
-		<iframe id="player" type="text/html" src="http://www.youtube.com/embed/ltNLbyp2FLM?enablejsapi=1&rel=0&controls=0&autoplay=0&showinfo=0&modestbranding=1" origin="http://www.bengal.missouri.edu/~wjg2q2/faith/lysaundra.html" frameborder="0"> </iframe>
-		</div>
-
 	<div>	
 		<div>
-		<img src="images/Mary_FINAL_web.jpg" class="story_img" id="imageID" />
+		<img src="images/Mary_FINAL_web.jpg" class="story_img" id="imageID" alt="Portrait of Mary Hartigan"/>
 
-		<div class="wrapper story_caption"><p>Mary Hartigan stands by the window of a classroom at the Congregation Beth Shalom. Her conversion to Judaism originated from her father who was sent to liberate one of the Nazi concentration camps in Germany.</p></div>
+		<div class="wrapper story_caption"><p>Mary Hartigan’s conversion to Judaism originated with her father, who was sent to liberate Dachau, the first Nazi concentration camp in Germany. Hartigan remembers her father talking about his experience in Europe when she was young.
+</p></div>
 		</div>
 
 		<div class="video_tease">
-			<a id="play_button">&nbsp;</a>
-			<a id="pause_button">&nbsp;</a>
+			<a href="#video_container" id="play_button">&nbsp;</a>
 			<h4 class="tease_headline">Mary Hartigan</h4>
-			<p class="tease_summary">Converting to Judaism, Mary Hartigan enters a new chapter of life with her other half and Columbia Jewish community.</p>
+			<p class="tease_summary">Mary Hartigan’s father played an important role in her decision to convert to Judaism. Since the switch, Hartigan has entered a new chapter of her life.</p>
 		</div>
 
 	</div>
@@ -112,16 +73,18 @@
 		<h6 class="story_byline">By Anna Seaman</h6>
 
 		<aside class="sidebar">
-			<img src="images/Mary_2_FINAL_web.jpg" class="sidebar_image" alt="caption goes here" />
-			<p class="secondary_caption">Hartigan wears kipa, a closefitting skullcap, and talit, the shawl on her shoulders. She has a dozen of kipa and talit that she got from Israel. She wears a kipa when she reads the Hebrew Bible Torah.</p>
+			<img src="images/Mary_2_FINAL_web.jpg" class="sidebar_image" alt="Portrait of Mary Hartigan"/>
+			<p class="secondary_caption">Hartigan wears kipa, a close-fitting skullcap, and talit, the shawl on her shoulders. She has a dozen kipa and talit that she got from Israel. She wears kipa when she reads the Torah.</p>
 			<div class="sidebar_pull_quote">
 			<p>“Jews do the commandments because it’s the right thing to do ethically ... There’s no doing something because you’re going to get a reward in heaven.”</p>
 			</div>
+			<img src="images/RichardHartigan.jpeg" class="sidebar_image" alt="Mary Hartigan has a photo of two men standing beside a pile of dead bodies at a German concentration camp. One of the men was Mary’s father, Richard Hartigan, although she doesn’t know which one. Mary keeps the photo in her wallet as a remembrance of her father.">
+			<p class="secondary_caption">Mary Hartigan has a photo of two men standing beside a pile of dead bodies at a German concentration camp. One of the men was Mary’s father, Richard Hartigan, although she doesn’t know which one. Mary keeps the photo in her wallet as a remembrance of her father.</p>
 		</aside>	
 
 		<article class="story_text">
 
-			<p>In April 1945, Mary Hartigan’s father, Richard Hartigan, served as a soldier in the U.S. Army. He was among the men sent to liberate the first Nazi concentration camp. He saw firsthand the atrocities of the Holocaust. The imagery stuck with him for the rest of his life.</p>
+			<p>In April 1945, Mary Hartigan’s father, Richard Hartigan, served as a soldier in the U.S. Army. He was among the men sent to liberate <a href="http://www.ushmm.org/wlc/en/article.php?ModuleId=10005214"  target="_blank" class="body_link">the first Nazi concentration camp.</a> He saw firsthand the atrocities of the Holocaust. The imagery stuck with him for the rest of his life.</p>
 
 			<p>Mary remembers hearing stories during her childhood about the war and the black-and-white photo he carried in his wallet. The picture shows Richard looking at the pile of dead bodies with his fellow soldiers.</p>
 
@@ -131,42 +94,41 @@
 
 			<div class="subhead">Embracing Judaism</div>
 
-			<p>The oldest of three children, Hartigan was born in 1951 in St. Joseph. She was Catholic before high school when she changed her understanding of religion. In November 1983, still interested in the Jewish faith, she got in touch with Rabbi Harvey Rosenfeld with Congregation Beth Shalom in Columbia. After an hour-long conversation, she knew she wanted to convert.</p>
+			<p>The oldest of three children, Hartigan was born in 1951 in St. Joseph. She was Catholic before high school when she changed her understanding of religion. In November 1983, still interested in the Jewish faith, she got in touch with Rabbi Harvey Rosenfeld with <a href="http://www.cbsmo.org/"  target="_blank" class="body_link">Congregation Beth Shalom</a> in Columbia. After an hour-long conversation, she knew she wanted to convert.</p>
 
 			<p>Hartigan agreed with the moral viewpoint of Judaism. “Jews do the commandments because it’s the right thing to do ethically; it’s the right thing to do vis-à-vis your fellow human,” Hartigan says. “There’s no doing something because you’re going to get a reward in heaven.”</p>
 
-			<p>Conversion involves “a lot more obligations, a lot more duties and a big change in one’s lifestyle,” says Jon Levenson, Harvard professor of Jewish studies. “Rabbis don’t traditionally go out and seek converts. They often try to, in fact, dissuade converts because they want to make sure they’re up to the challenge.”</p>
+			<p>Conversion involves “a lot more obligations, a lot more duties and a big change in one’s lifestyle,” says <a href="http://www.hds.harvard.edu/people/faculty/jon-d-levenson" target="_blank" class="body_link">Jon Levenson, Harvard professor of Jewish studies.</a> “Rabbis don’t traditionally go out and seek converts. They often try to, in fact, dissuade converts because they want to make sure they’re up to the challenge.”</p>
 			
 			<div class="pull_quote">
 			<p>“Jews do the commandments because it’s the right thing to do ethically ... There’s no doing something because you’re going to get a reward in heaven.”</p>
 			</div>
 
-			<p>One percent of Missouri’s population affiliates with Jewish tradition, and that number takes up 2 percent of Americans. Northeastern states including New York and New Jersey have the largest Jewish population at 6 percent of each state.</p>
+			<p>One percent of Missouri’s population affiliates with Jewish tradition, and that number takes up 2 percent of Americans, according to the <a href="http://religions.pewforum.org/maps" target="_blank" class="body_link">Pew Forum on Religion and Public Life.</a> Northeastern states including New York and New Jersey have the largest Jewish population at 6 percent of each state.</p>
 
 			<div class="subhead">Falling in love</div>
 
-			<p>When she first converted to Judaism, Hartigan felt comfortable in various community organizations such as Hillel, the Jewish organization on MU campus. She met Rick Diamant during one Hillel gathering at her apartment.</p>
-
-			<p>“He had to be at work at 8 o’clock the next morning. He didn’t leave until like 3 or 4,” Hartigan recalls. “Something like that?”</p>
-
+			<p>When she converted to Judaism, Hartigan felt comfortable in various community organizations such as Hillel, the Jewish organization on MU campus. She met Rick Diamant during one Hillel gathering at her apartment.</p>
+			<p>“He had to be at work at 8 o’clock the next morning,” Hartigan recalls. “He didn’t leave until like 3 or 4. Something like that?”</p>
 			<p>“Something like that,” Diamant says with an indulgent smile.</p>
-
-			<p>Baseball sparked in their relationship. Diamant had stopped regularly attending synagogue after he left for college. He attended the services about three times a year. Hartigan motivated him to return to Saturday morning services, and together they became more involved in the Jewish community.</p>
-
-			<p>As a part of Jewish dietary laws, Hartigan doesn’t mix meat and dairy at meals or eat shellfish or pork — bacon was the hardest to give up. She observes Shabbat, the holiest day of the week, from sundown on Friday to sundown on Saturday. Hartigan lights candles and recites a blessing with Diamant on Friday evenings.</p>
+			<p>Diamant had stopped regularly attending synagogue after he left for college. He attended the services about three times a year. Hartigan motivated him to return to Saturday morning services, and together they became more involved in the Jewish community.</p>
+			<p>As a part of Jewish dietary laws, Hartigan doesn’t mix meat and dairy at meals or eat shellfish or pork — bacon was the hardest to give up. She observes Shabbat, the holiest day of the week, from sundown on Friday to sundown on Saturday. Hartigan lights candles and recites a blessing with her husband on Friday evenings.</p>
 
 			<div class="subhead">Contributing to the community</div>
 
 			<p>At 61, Hartigan enjoys volunteering with local Jewish organizations. She used to be the treasurer for the Hadassah chapter, a Women’s Zionist group. Now she serves as treasurer for Sisterhood, an organization that fundraises for the synagogue’s and community’s needs.</p>
 
-			<p>Besides local contributions, Hartigan has been to Israel seven times since 2003. She even has a favorite juice place and cannot wait to go back for some falafel. She also goes to Yad Vashem, the Israeli Holocaust museum in Jerusalem.</p>
+			<p>Besides local contributions, Hartigan has been to Israel seven times since 2003. She even has a favorite juice place and cannot wait to go back for some falafel. She also goes to <a href="http://www.yadvashem.org/"  target="_blank" class="body_link">Yad Vashem,</a> the Israeli Holocaust museum in Jerusalem.</p>
 
 			<p>Several photos on the living room shelves are of the Hartigan’s close friends Rabbi Yossi Feintuch and his family. Mary went to Israel for Feintuch’s son’s wedding. “We don’t have family in town, so we make our family out of our friends,” Hartigan says.</p>
 
 			<p>Hartigan has gained more than a renewed faith; she gained love and a sense of belonging in the Jewish community.</p>
 
-			<p>“It’s not just a belief in God. It’s a part of who you are; it’s a people-hood that you embrace,” Rosenfeld says.</p>
-
+			<p>“It’s not just a belief in God,” Rosenfeld says. “It’s a part of who you are; it’s a people-hood that you embrace.”</p>
+	
+		<div id="video_container">
+		<iframe id="video" src="http://www.youtube.com/embed/ltNLbyp2FLM?list=UUOOD7UJ1b6o14kdWbP1H-kA" frameborder="0" allowfullscreen></iframe>
+	</div>
 
 		</article>
 
@@ -175,62 +137,63 @@
 
 	<hr class="line2"></hr>	
 
-<div id = "story_slider" class="royalSlider rsDefault wrapper">
+	<div id = "story_slider" class="royalSlider rsDefault wrapper">
 		<!-- Teaser heads must be 20 characters or less -->
 			<div>
-
-				<img class="story_thumb" src="images/thumbs/ken_thumb.jpg"/>
-				<div class="story_nav_text">
-				<p class="story_tag">Ken McRae</p>
-				<h5 class="story_name">A yogic path</h5>
-				<p class="story_summary">Businessman-turned-yoga-teacher takes a complex spiritual journey</p>
-				</div>
-			</div>
-
-			<div>
-				<img class="story_thumb" src="images/thumbs/allie_thumb.jpg"/>
-				<div class="story_nav_text">
-				<p class="story_tag">Allie Gassmann</p>
-				<h5 class="story_name">Acting on beliefs</h5>
-				<p class="story_summary">Gassmann tries to live with the entire planet in mind</p>
-				</div>
-			</div>
-
-			<div>
-				<img class="story_thumb" src="images/thumbs/jeff_thumb.jpg"/>
-				<div class="story_nav_text">
-				<p class="story_tag">Jeff Stack</p>
-				<h5 class="story_name">Plea for peace</h5>
-				<p class="story_summary">Jeff Stack advocates for nonviolence</p>
-				</div>
-			</div>
-
-			<div>
-				<img class="story_thumb" src="images/thumbs/lysaundra_thumb.jpg"/>
-				<div class="story_nav_text">
-				<p class="story_tag">LySaundra Campbell</p>
-				<h5 class="story_name">Defining grace</h5>
-				<p class="story_summary">LySaundra Campbell found the strength to move on from family tragedy</p>
-				</div>
-			</div>
-
-			<div>
-				<img class="story_thumb" src="images/thumbs/theo_thumb.jpg"/>
-				<div class="story_nav_text">
-				<p class="story_tag">Theo Tushaus</p>
-				<h5 class="story_name">Leap from faith</h5>
-				<p class="story_summary">Theo Tushaus finds comfort in his sexuality after discovering an atheist group</p>
-				</div>
-			</div>
-
-			<div>
-				<img class="story_thumb" src="images/thumbs/elisabeth_thumb.jpg"/>
-				<div class="story_nav_text">
+				<img class="story_thumb" src="images/thumbs/elisabeth_thumb.jpg" alt="Portrait of Elisabeth Sobczak"/>
+				<a href=elisabeth.html class="read"><div class="story_nav_text">
 				<p class="story_tag">Elisabeth Sobczak</p>
 				<h5 class="story_name">A perfect storm</h5>
-				<p class="story_summary">Elisabeth Sobczak struggles and triumphs with self-acceptance and sexuality</p>
-				</div>
+				<p class="story_summary">Elisabeth Sobczak finds inner peace in her faith. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
 			</div>
+		
+			<div>
+				<img class="story_thumb" src="images/thumbs/lysaundra_thumb.jpg" alt="Portrait of LySaundra Campbell"/>
+				<a href=lysaundra.html class="read"><div class="story_nav_text">
+				<p class="story_tag">LySaundra Campbell</p>
+				<h5 class="story_name">Defining grace</h5>
+				<p class="story_summary">LySaundra Campbell saw God through pain and sorrow. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
+			</div>
+			
+			<div>
+				<img class="story_thumb" src="images/thumbs/ken_thumb.jpg" alt="Portrait of Ken McRae"/>
+				<a href=ken.html class="read"><div class="story_nav_text">
+				<p class="story_tag">Ken McRae</p>
+				<h5 class="story_name">Living La Vida Yoga</h5>
+				<p class="story_summary">Ken McRae found spirituality through yoga. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/allie_thumb.jpg" alt="Portrait of Allie Gassmann"/>
+				<a href=allie.html class="read"><div class="story_nav_text">
+				<p class="story_tag">Allie Gassmann</p>
+				<h5 class="story_name">Acting on beliefs</h5>
+				<p class="story_summary">Allie Gassmann tries to live with the entire planet in mind. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/jeff_thumb.jpg" alt="Portrait of Jeff Stack"/>
+				<a href=jeff.html class="read"><div class="story_nav_text">
+				<p class="story_tag">Jeff Stack</p>
+				<h5 class="story_name">Plea for peace</h5>
+				<p class="story_summary">Jeff Stack’s advocacy stems from his belief in nonviolence. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
+			</div>
+
+			<div>
+				<img class="story_thumb" src="images/thumbs/theo_thumb.jpg" alt="Portrait of Theo Tushaus"/>
+				<a href=theo.html class="read"><div class="story_nav_text">
+				<p class="story_tag">Theo Tushaus</p>
+				<h5 class="story_name">Leap from faith</h5>
+				<p class="story_summary">Theo Tushaus finds comfort in his sexuality after discovering an atheist group. <span class="read">Read More &#62;&#62;</span></p>
+				</div></a>
+			</div>
+
+
 
 	</div>	
 
@@ -239,11 +202,13 @@
 		<footer>
 			<ul class="footer">
 				
-				<li class="footer">Published by <span class="italics"><a href="http://www.voxmagazine.com/" id="vox">VOX Magazine</a></span></li>
+				<li class="footer">Published by <span class="italics"><a href="http://www.voxmagazine.com/" class="vox">VOX Magazine</a></span></li>
 								
-				<li class="right">About</li>
+				<li class="last"><a href="resources.html" class="vox">Resources</a></li>
 
-				<li class="right">The photos</li>
+				<li class="right"><a href="about.html" class="vox">About</li>
+
+				<li class="right"><a href="photos.html" class="vox">Photos</li>
 			</ul>
 
 		</footer>
@@ -252,10 +217,9 @@
 
 				<li class="fb-send" data-href="http://www.voxmagazine.com/" data-font="arial"></li>
 
-				<li><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a></li>
+				<li class="tweet"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a></li></div>
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 			</ul>
-
 	</body>
 	
 <script>
